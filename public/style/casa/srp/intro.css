@@ -1,0 +1,399 @@
+/*
+  INTRO
+*/
+
+#intro{
+  margin:.5rem; padding:1rem;
+  background:#FFF; border:1px solid #e3e3e3; border-radius:.5rem;
+  transition:all 300ms ease-out;
+}
+
+#intro .sw{
+  position:relative;
+}
+
+/*
+  BREADCRUMBS
+*/
+
+#intro ol{
+  font-size:0; line-height:0;
+  overflow:hidden;
+}
+
+/*
+  PAGE TITLE
+*/
+
+#intro h1{
+  width:calc(100% - 50px); overflow:hidden; text-overflow:ellipsis;
+  font:1.6rem 'Museo-Sans-700'; color:#333f48;
+}
+
+#intro h1 span{
+  display:block;
+  line-height:0;
+  text-indent:-9999em;
+}
+
+#intro h1 a{
+  font-family:inherit; color:#333f48; text-decoration:none;
+  white-space:nowrap;
+}
+
+/*
+  FILTERS ACTIONS
+*/
+
+#intro menu{
+  margin:.4rem 0 0;
+  width:calc(100% - 50px); overflow:hidden; text-overflow:ellipsis;
+  font:1.3rem 'Museo-Sans-500'; color:#6a7785;
+}
+
+#intro .clearAllFilters{
+  display:none;
+}
+
+/*
+  LIST VIEW OPTIONS
+*/
+
+#intro .list-view-options{
+  position:relative;
+  margin-top:1rem; padding-top:1rem;
+  height:2.5rem;
+  border-top:1px solid #e3e3e3;  
+}
+
+#intro .list-view-options a{
+  float:left;
+  width:50%;
+  font:1.2rem 'Museo-Sans-500'; color:#333f48; text-align:center; text-transform:uppercase; text-decoration:none;
+}
+
+#intro .list-view-options span{
+  position:absolute;
+  top:.5rem; left:50%;
+  width:.1rem; height:100%;
+  background:#e3e3e3;
+  text-indent:-9999em;
+}
+
+#intro .list-view-options a.tabler-filters-trigger,
+#intro .list-view-options span.ghost{
+  display:none;
+}
+
+/*
+  SRP USER ACTIONS
+*/   
+
+#intro .srp-user-actions{
+  position:absolute;
+  top:-1rem; right:-1rem;
+  width:5rem; height:5rem;
+}
+
+#intro .srp-user-actions .genericlead{
+  display:none;
+}
+
+#intro .srp-user-actions .bookmark{
+  position:absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+}
+
+#intro .srp-user-actions .star{
+  position:absolute;
+  top:50%; left:50%;
+  transform:translate(-50%, -50%);
+}
+
+
+@media screen and (min-width: 736px) { /* Tablet */
+
+  /*
+    INTRO
+  */
+
+  #intro{
+    margin:6rem 0 6.5rem; padding:2.5rem 2rem;
+    border:0 none; border-bottom:1px solid #e3e3e3; border-radius:0;
+  }
+
+  /*
+    BREADCRUMBS
+  */
+
+  #intro ol{
+    padding-top:5.3rem;
+    font-size:1.2rem; line-height:normal; color:#6a7785;
+    overflow:hidden;
+  }
+
+  #intro li{
+    float:left;
+  }
+
+  #intro li a{
+    color:#6a7785;
+  }
+
+  #intro li > span{
+    padding:0 .7rem 0 .2rem;
+  }
+
+  #intro li a:hover,
+  #intro li:last-of-type a{
+    color:#333f48; text-decoration:none;
+  }   
+
+  /*
+    PAGE TITLE
+  */
+
+  #intro h1{
+    width:auto;
+    font-size:2.2rem; line-height:3rem;
+  }
+
+  #intro h1 span{
+    display:inline;
+    line-height:normal; color:#6a7785;
+  }
+
+  /*
+    FILTERS ACTIONS
+  */
+
+  #intro menu{
+    margin:1rem 0 0;
+    font-size:1.2rem;
+  }
+
+  #intro menu .clearFilter{
+    display:inline-block;
+    padding:0 2.1rem 0 .5rem;
+    font-family:'Museo-Sans-700'; line-height:2.5rem;
+    background:url(../images/srp-intro-clearFilter.svg) calc(100% - .5rem) center no-repeat; background-size: auto 1rem; border:1px solid #bbb; border-radius:.3rem;
+  }
+
+  #intro menu .clearFilter:hover{
+    background-color:#e3e3e3;
+  }
+
+  #intro .clearAllFilters{
+    display:inline-block;
+    padding:0 .5rem;
+    line-height:2.5rem; color:#e4002b; text-decoration:underline;
+  }
+
+  #intro .clearAllFilters:hover{
+    text-decoration:none;    
+  }
+
+  /*
+    SEARCH - FAKE
+  */  
+
+  .search{
+    position:absolute;
+    top:0rem; left:0;
+    width:calc(100% - 28.5rem); height:3.3rem;
+    background:#f1f1f1;
+  }
+
+  /*
+    SRP USER ACTIONS
+  */   
+
+  #intro .srp-user-actions{
+    position:absolute;
+    top:0; right:0;
+    width:auto; height:3.3rem;
+  }
+
+  #intro .srp-user-actions .bookmark,
+  #intro .srp-user-actions .genericlead{
+    position:static; float:left; display:block;
+    top:auto; right:auto;
+    margin-left:1.5rem;
+    width:auto; height:3.3rem;
+    color:#333f48; text-decoration:none;
+  }
+
+  #intro .srp-user-actions .bookmark:hover,
+  #intro .srp-user-actions .genericlead:hover{
+    color:#e4002b;
+  }
+
+  #intro .srp-user-actions .star{
+    position:static; float:left;
+    top:auto; right:auto;
+    margin:.5rem .5rem 0 0;
+    transform:translate(0, 0);
+  }  
+
+  #intro .srp-user-actions .bookmark:after{
+    content:'Salva ricerca';
+    font-size:1.3rem; line-height:3.5rem; 
+  }
+
+  #intro .srp-user-actions .genericlead:after{
+    content:'Contatta le agenzie';
+    font-size:1.3rem; line-height:3.5rem; 
+  }  
+
+  /*
+    LIST VIEW OPTIONS
+  */
+
+  #intro .list-view-options{
+    position:absolute;
+    bottom:-9rem;
+    margin-top:0; padding:1rem 0;
+    width:100%; height:6.5rem;
+    border-top:0 none;  
+  }
+
+  #intro .list-view-options a{
+    float:left;
+    padding:0 1.5rem;
+    width:auto;
+    font-size:1.4rem; line-height:4.3rem; text-transform:none;
+    background:#FFF; border:1px solid #ccc;
+  }
+
+  #intro .list-view-options a:hover{
+    background-color:#e3e3e3;
+  }  
+
+  #intro .list-view-options a:nth-of-type(2){
+    float:right;
+    margin-right:1.5rem;
+    line-height:4.5rem;
+    background:transparent; border:0 none;
+  }
+
+  #intro .list-view-options a:nth-of-type(2):hover{
+    color:#e4002b;
+  }
+
+  #intro .list-view-options a.tabler-filters-trigger{
+    float:right; display:inline-block;
+    padding:.8rem 1.5rem 0;
+    height:4.3rem;
+    line-height:normal; text-align:left;
+  }
+
+  #intro .list-view-options a.tabler-filters-trigger em{
+    display:block;
+    font-style:normal; font-size:1rem; line-height:normal;
+  }
+
+  #intro .list-view-options span{
+    display:none;
+  }  
+
+}
+
+@media screen and (min-width: 950px) { /* Desktop */
+
+  /*
+    INTRO
+  */
+
+  #intro{
+    margin-top:0; padding:2.5rem 0;    
+  }
+
+  #intro .sw{
+    padding:0 2.5rem;
+  }
+
+  .hasSkin #intro{
+    margin:0 auto 6.5rem;
+    width:96rem;
+  }
+
+  /*
+    SEARCH - FAKE
+  */  
+
+  .search{
+    left:2.5rem;
+    width:calc(100% - 37rem);
+  }
+
+  /*
+    SRP USER ACTIONS
+  */   
+
+  #intro .srp-user-actions{
+    right:2.5rem;
+  }  
+
+  /*
+    LIST VIEW OPTIONS
+  */
+
+  #intro .list-view-options{
+    width:calc(100% - 36.5rem);
+  }
+
+  #intro .list-view-options a:nth-of-type(2){
+    margin-right:0;
+  }
+
+  #intro .list-view-options a.tabler-filters-trigger{
+    display:none;
+  }
+
+}
+
+@media screen and (min-width: 1300px) { /* Desktop */
+
+  /*
+    INTRO
+  */
+
+  #intro{
+    padding:2.5rem 0;
+  }
+
+  #intro .sw{
+    padding:0;
+  }  
+
+  .hasSkin #intro{
+    padding:2.5rem;
+  }
+
+  /*
+    SEARCH - FAKE
+  */  
+
+  .search{
+    left:0;
+    width:calc(100% - 31.5rem);
+  }
+
+  /*
+    SRP USER ACTIONS
+  */   
+
+  #intro .srp-user-actions{
+    right:0;
+  }   
+
+  /*
+    LIST VIEW OPTIONS
+  */
+
+  #intro .list-view-options{
+    width:calc(100% - 31.5rem);
+  }  
+
+}

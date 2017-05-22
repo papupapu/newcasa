@@ -1,0 +1,117 @@
+.srp section > .sw {
+  padding:0 .5rem;
+}
+
+.srp article{
+  position:relative;
+  margin:.5rem 0 0; padding:77% 1.5rem 1.5rem;
+  background:#FFF; border:1px solid #e3e3e3;
+}
+
+.srp article img{
+  position:absolute;
+  top:0; left:0;
+  width:100%;
+}
+
+.srp article h1{
+  font-weight:700; font-size:1.6rem; line-height:2.3rem; color:#333f48;
+}
+
+.srp article h1 a{
+  color:#333f48; text-decoration:none;
+}
+
+.srp article p{
+  margin-top:.3rem;
+  font-size:1.3rem; line-height:2rem; color:#333f48;
+}
+
+.srp article p span{
+  display: block; color:#6a7785;
+}
+
+.srp article p.desc{
+  display:none;
+}
+
+@media screen and (min-width: 736px) { /* Tablet */
+
+  .srp section > .sw {
+    padding:0 2rem;
+  }
+
+  .srp article{
+    margin:2rem 0 0; padding:1.5rem 1.5rem 1.5rem 28.5rem;
+    height:20rem;
+  }
+
+  .srp article p.desc{
+    display:block;
+    margin-top:1rem;
+  }   
+
+  .srp article img{
+    position:absolute;
+    top:0; left:0;
+    width:auto; max-height:100%;
+  }  
+
+}
+
+@media screen and (min-width: 950px) { /* Desktop */
+
+  .srp section{
+    margin-bottom:5rem;
+  }
+
+  .srp section > .sw {
+    position:relative;
+    padding:0 2.5rem;
+  }
+
+  .hasSkin .srp section > .sw{
+    margin-right:auto; margin-left:auto; padding:0 2.5rem;
+    width:96rem;
+    background:#f1f1f1;
+  }  
+
+  .srp article{
+    margin:1.5rem 0 0;
+    width:calc(100% - 31.5rem);
+  }
+
+  aside{
+    position:absolute;
+    top:-5.5rem; right:2.5rem;
+    width:30rem;    
+  }
+
+  .hasSkin aside{
+    right:2.5rem;
+  }
+
+  aside div{
+    padding:1.5rem;
+    width:calc(100% -.2rem);
+    background:#FFF; border:1px solid #e3e3e3;
+  }
+
+}
+
+@media screen and (min-width: 1300px) { /* Desktop */
+
+  .srp section > .sw {
+    padding:0;
+  }
+
+  .srp article{
+    padding-left:37.3rem;
+    height:26.5rem;
+  }
+
+  aside{
+    right:0;
+  }  
+
+}

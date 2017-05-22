@@ -1,21 +1,59 @@
+/*
+  PAGE FORMATTING
+*/
+
 .srp section > .sw {
   padding:0 .5rem;
 }
 
+/*
+  ARTICLE
+*/
+
 .srp article{
   position:relative;
-  margin:.5rem 0 0; padding:77% 1.5rem 1.5rem;
-  background:#FFF; border:1px solid #e3e3e3;
+  margin:.5rem 0 0; padding:1rem 1rem .8rem;
+  background:#FFF; border:1px solid #e3e3e3;  
 }
 
-.srp article img{
-  position:absolute;
-  top:0; left:0;
-  width:100%;
+/* flex - easy elements order config */
+
+.srp article > div{
+  display:flex;
+  flex-direction:column;  
+}
+
+.srp article figure{
+  order:1;
+}
+
+.srp article ul.infos{
+  order:2;
 }
 
 .srp article h1{
-  font-weight:700; font-size:1.6rem; line-height:2.3rem; color:#333f48;
+  order:3;
+}
+
+.srp article p.propertyType{
+  order:4;
+}
+
+.srp article p.desc{
+  order:5;
+}
+
+.srp article menu{
+  order:6;
+}
+
+/*
+  Article elements formatting
+*/
+
+.srp article h1{
+  margin:-.1rem 0 .2rem;
+  font-weight:700; font-size:1.5rem; line-height:2.3rem; color:#333f48;
 }
 
 .srp article h1 a{
@@ -27,35 +65,213 @@
   font-size:1.3rem; line-height:2rem; color:#333f48;
 }
 
-.srp article p span{
-  display: block; color:#6a7785;
-}
-
 .srp article p.desc{
   display:none;
 }
 
+.srp article p span{
+  display: block; color:#6a7785;
+}
+
+.srp article ul.infos{
+  margin:.5rem 0 0;
+  line-height:3rem;
+}
+
+.srp article ul.infos li{
+  float:right;
+  margin-left:.5rem;
+  font-weight:700; font-size:1.6rem; color:#333f48;
+}
+
+.srp article ul.infos li:first-of-type{
+  float:left;
+  margin-left:0;
+  font-weight:700; font-size:1.8rem; color:#333f48;
+}
+
+.srp article ul.infos li span{
+  font-weight:400; font-size:1.1rem; color:#6a7785;
+}
+
+.srp article figure{
+  display:block;
+  margin:-1rem 0 0 -1rem;
+  width:calc(100% + 2rem); height:calc( (100vw / 320) * 180);
+  overflow:hidden;
+}
+
+.srp article.gold figure{
+  height:calc( (100vw / 320) * 225);
+}
+
+.srp article.platinum figure{
+  height:calc( (100vw / 320) * 235);
+}
+
+.srp article figure a{
+  display:block;
+  width:100%; height:100%;
+}
+
+.srp article figure img{
+    width:100%;
+}
+
+.srp article.gold figure img,
+.srp article.platinum figure img{
+  height:calc( (100vw / 320) * 235);
+}
+
+.srp article figure span{
+  position:absolute;
+  top:0; left:0;
+  padding:0 .5rem;
+  font-weight:700; font-size:.8rem; line-height:2rem; color:#FFF; text-decoration:none; text-transform:uppercase;
+  background:#697684;
+}
+
+.srp article menu{
+  margin:1rem 0 0 -1rem; padding:1rem 1rem 0;
+  width:calc(100% + 2rem);
+  border-top:1px solid #e3e3e3;
+  overflow:hidden;
+}
+
+.srp article .agency{
+  float:left;
+}
+
+.srp article .agency img{
+  display:block;
+  max-width:120px;
+  border:1px solid #f1f1f1;
+}
+
+.srp article .bookmark{
+  float:right;
+  margin-top:.1rem;
+}
+
 @media screen and (min-width: 736px) { /* Tablet */
+
+  /*
+    PAGE FORMATTING
+  */
 
   .srp section > .sw {
     padding:0 2rem;
   }
 
+  /*
+    ARTICLE
+  */
+
   .srp article{
-    margin:2rem 0 0; padding:1.5rem 1.5rem 1.5rem 28.5rem;
-    height:20rem;
+    margin:2rem 0 0; padding:1.5rem 1.5rem 1.5rem 25.7rem;
+    height:18rem;
   }
+
+  .srp article.silver{
+    padding-left:31.8rem;
+    height:22.5rem;
+  }
+  
+  .srp article.platinum,
+  .srp article.gold{
+    padding-left:37.2rem;
+    height:26.5rem;
+  }  
+
+  /* flex - easy elements order config */
+
+  .srp article h1{
+    order:1;
+  }
+
+  .srp article p.propertyType{
+    order:2;
+  }
+
+  .srp article ul.infos{
+    order:3;
+  }
+
+  .srp article p.desc{
+    order:4;
+  }  
+
+  .srp article figure{
+    order:5;
+  }  
+
+  /*
+    Article elements formatting
+  */  
+
+  .srp article h1{
+    margin:0;
+    font-size:1.6rem; line-height:2.4rem;
+  }  
+
+  .srp article ul.infos{
+    margin-top:1rem;
+  }
+
+  .srp article ul.infos li:first-of-type{
+    font-size:2rem;
+  }  
 
   .srp article p.desc{
     display:block;
     margin-top:1rem;
   }   
 
-  .srp article img{
+  .srp article.standard p.desc{
+    display:none;
+  }     
+
+  .srp article figure,
+  .srp article.platinum figure,
+  .srp article.gold figure{
     position:absolute;
     top:0; left:0;
+    margin:0;
+    width:auto; height:100%;
+  }
+
+  .srp article figure img{
     width:auto; max-height:100%;
+  }
+
+  .srp article menu{
+    position:absolute;
+    bottom:1rem; right:0;
+    padding-right:1.5rem; padding-left:1.5rem;
+    width:calc(100% - 24.2rem);
   }  
+
+  .srp article.silver p.desc{
+    display:none;
+  }
+
+  .srp article.silver menu{
+    width:calc(100% - 30.3rem);
+  }
+  
+  .srp article.platinum menu,
+  .srp article.gold menu{
+    width:calc(100% - 35.7rem);
+  }    
+
+}
+
+@media screen and (min-width: 768px) { /* Tablet */
+
+  .srp article.silver p.desc{
+    margin-top:0;
+    display:block;
+  }
 
 }
 
@@ -81,6 +297,28 @@
     width:calc(100% - 31.5rem);
   }
 
+
+  .hasSkin .srp article{
+    padding-left:20rem;
+    height:14rem;
+  }
+
+  .hasSkin .srp article.silver{
+    padding-left:25.5rem;
+    height:18rem;
+  }
+  
+  .hasSkin .srp article.platinum,
+  .hasSkin .srp article.gold{
+    padding-left:28.2rem;
+    height:20rem;
+  }  
+
+  .hasSkin .srp article p.desc{
+    display:none; 
+  }
+
+
   aside{
     position:absolute;
     top:-5.5rem; right:2.5rem;
@@ -103,11 +341,6 @@
 
   .srp section > .sw {
     padding:0;
-  }
-
-  .srp article{
-    padding-left:37.3rem;
-    height:26.5rem;
   }
 
   aside{

@@ -158,6 +158,28 @@ article .bookmark{
   margin-top:.1rem;
 }
 
+/*
+  PAGINATION
+*/
+
+.pagination{
+  margin:2.5rem 0 0;
+  width:100%;
+}
+
+.pagination ul{
+  display:none;
+}
+
+/*
+  SIDEBAR
+*/
+
+aside div{
+  width:0; height:0;
+  overflow:hidden;
+}
+
 @media screen and (min-width: 736px) { /* Tablet */
 
   /*
@@ -373,6 +395,7 @@ article .bookmark{
   }
 
   .pagination ul{
+    display:block;
     margin:0 auto;
     width:42rem;
     overflow:hidden;
@@ -417,9 +440,10 @@ article .bookmark{
   }
 
   aside div{
-    padding:1.5rem;
-    width:calc(100% -.2rem);
+    margin-bottom:1.5rem; padding:1.5rem;
+    width:calc(100% - .2rem); height:auto;
     background:#FFF; border:1px solid #e3e3e3;
+    overflow:visible;
   }
 
   aside h3{

@@ -131,13 +131,9 @@
     line-height:normal;
   }
 
-  .hasSkin #header{
-    margin:0 auto; padding-top:1.5rem;
-    width:96rem; height:17rem;
-  }  
-
   #header .sw{
     position:relative; z-index:9;
+    padding-right:1rem; padding-left:1rem;
     background:#FFF;
     overflow:hidden;
   }  
@@ -255,13 +251,42 @@
 
 	#top-ad.leaderboard{
 		position:absolute; z-index:11;
-		top:1rem; right:2.5rem;
+		top:1rem; right:1rem;
 		width:72.8rem; height:9rem;
 		background:#f1f1f1;    
 	}
 
 	.home #top-ad{
 		display:none;
+	}
+
+  /*
+    Adv skin needs some adjustements
+  */
+
+  .hasSkin #header{
+    margin:0 auto; padding-top:1.5rem;
+    width:96rem; height:17rem;
+  }  
+
+  .hasSkin #header .sw{
+    padding-right:1rem; padding-left:1rem;    
+  }
+
+	.hasSkin #top-ad.leaderboard{
+		right:1rem;
+	}  
+
+}
+
+@media screen and (min-width: 1050px) { /* Desktop */
+
+  #header .sw{
+    padding-right:2.5rem; padding-left:2.5rem;    
+  }
+
+  #top-ad.leaderboard{
+		right:2.5rem;
 	}
 
 }

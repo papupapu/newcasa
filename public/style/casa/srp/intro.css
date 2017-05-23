@@ -306,16 +306,11 @@
   */
 
   #intro{
-    margin-top:0; padding:2.5rem 0;    
+    margin:0 auto 6.5rem; padding:2.5rem 0;    
   }
 
   #intro .sw{
-    padding:0 2.5rem;
-  }
-
-  .hasSkin #intro{
-    margin:0 auto 6.5rem;
-    width:96rem;
+    padding:0 1rem;
   }
 
   /*
@@ -323,7 +318,7 @@
   */  
 
   .search{
-    left:2.5rem;
+    left:1rem;
     width:calc(100% - 37rem);
   }
 
@@ -332,7 +327,7 @@
   */   
 
   #intro .srp-user-actions{
-    right:2.5rem;
+    right:1rem;
   }  
 
   /*
@@ -340,7 +335,7 @@
   */
 
   #intro .list-view-options{
-    width:calc(100% - 36.5rem);
+    width:calc(100% - 33.5rem);    
   }
 
   #intro .list-view-options a:nth-of-type(2){
@@ -349,6 +344,52 @@
 
   #intro .list-view-options a.tabler-filters-trigger{
     display:none;
+  }
+
+  /*
+    Adv skin needs some adjustements
+  */  
+
+  .hasSkin #intro{
+    width:96rem;
+  }  
+
+  .hasSkin #intro .sw{
+    padding:0 1rem;
+  }
+
+  .hasSkin .search{
+    left:1rem;
+    width:calc(100% - 33rem);
+  }  
+
+  .hasSkin #intro .srp-user-actions{
+    right:1rem;
+  }   
+
+  .hasSkin #intro .list-view-options{
+    width:calc(100% - 33rem);
+  }
+
+}
+
+@media screen and (min-width: 1050px) { /* Desktop */
+
+  #intro .sw{
+    padding:0 2.5rem;
+  }
+
+  .search{
+    left:2.5rem;
+    width:calc(100% - 37rem);
+  }  
+
+  #intro .srp-user-actions{
+    right:2.5rem;
+  }   
+
+  #intro .list-view-options{
+    width:calc(100% - 36.5rem);
   }
 
 }

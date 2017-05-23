@@ -94,6 +94,10 @@
   font-weight:400; font-size:1.1rem; color:#6a7785;
 }
 
+/* 
+  Article image height scaled according to ad type
+*/
+
 .srp article figure{
   display:block;
   margin:-1rem 0 0 -1rem;
@@ -101,12 +105,14 @@
   overflow:hidden;
 }
 
-.srp article.gold figure{
-  height:calc( (100vw / 320) * 225);
+.srp article.platinum figure,
+.srp article.platinum figure img{
+  height:calc( (100vw / 320) * 235);
 }
 
-.srp article.platinum figure{
-  height:calc( (100vw / 320) * 235);
+.srp article.gold figure,
+.srp article.gold figure img{
+  height:calc( (100vw / 320) * 225);
 }
 
 .srp article figure a{
@@ -118,11 +124,6 @@
     width:100%;
 }
 
-.srp article.gold figure img,
-.srp article.platinum figure img{
-  height:calc( (100vw / 320) * 235);
-}
-
 .srp article figure span{
   position:absolute;
   top:0; left:0;
@@ -131,10 +132,14 @@
   background:#697684;
 }
 
+/*
+  Agency infos + Actions
+*/
+
 .srp article menu{
   margin:1rem 0 0 -1rem; padding:1rem 1rem 0;
   width:calc(100% + 2rem);
-  border-top:1px solid #e3e3e3;
+  background:#FFF; border-top:1px solid #e3e3e3;
   overflow:hidden;
 }
 
@@ -165,6 +170,7 @@
 
   /*
     ARTICLE
+    Article height scaled according to ad type
   */
 
   .srp article{
@@ -231,6 +237,10 @@
     display:none;
   }     
 
+  /*
+    completely change image styling
+  */
+
   .srp article figure,
   .srp article.platinum figure,
   .srp article.gold figure{
@@ -243,6 +253,10 @@
   .srp article figure img{
     width:auto; max-height:100%;
   }
+
+  /*
+    Agency infos + Actions
+  */
 
   .srp article menu{
     position:absolute;
@@ -277,56 +291,90 @@
 
 @media screen and (min-width: 950px) { /* Desktop */
 
+  /*
+    PAGE FORMATTING
+  */
+
   .srp section{
     margin-bottom:5rem;
   }
 
   .srp section > .sw {
     position:relative;
-    padding:0 2.5rem;
+    padding:0 1rem;
   }
 
-  .hasSkin .srp section > .sw{
-    margin-right:auto; margin-left:auto; padding:0 2.5rem;
-    width:96rem;
-    background:#f1f1f1;
-  }  
+  /*
+    ARTICLE
+  */  
 
   .srp article{
-    margin:1.5rem 0 0;
-    width:calc(100% - 31.5rem);
+    margin:1rem 0 0; padding:.5rem 1rem .5rem 22.5rem;
+    width:calc(100% - 31rem); height:16rem;
   }
 
-
-  .hasSkin .srp article{
-    padding-left:20rem;
-    height:14rem;
-  }
-
-  .hasSkin .srp article.silver{
-    padding-left:25.5rem;
-    height:18rem;
+  .srp article.silver{
+    padding-left:26rem;
+    height:18.6rem;
   }
   
-  .hasSkin .srp article.platinum,
-  .hasSkin .srp article.gold{
-    padding-left:28.2rem;
-    height:20rem;
-  }  
-
-  .hasSkin .srp article p.desc{
-    display:none; 
+  .srp article.platinum,
+  .srp article.gold{
+    padding-left:30.4rem;
+    height:21.9rem;
   }
 
+  .srp article ul.infos{
+    margin-top:.5rem;
+  }  
+
+  .srp article ul.infos li{
+    float:right;
+    margin-left:.5rem;
+    font-weight:700; font-size:1.6rem; color:#333f48;
+  }
+
+  .srp article ul.infos li:first-of-type{
+    float:left;
+    margin-left:0;
+    font-weight:700; font-size:1.8rem; color:#333f48;
+  }
+
+  .srp article ul.infos li span{
+    font-weight:400; font-size:1.1rem; color:#6a7785;
+  }  
+
+  .srp article p.desc{
+    margin-top:0;
+  }
+
+  .srp article.silver p.desc{
+    display:none;
+  }
+
+  .srp article menu{
+    bottom:.2rem;
+    padding-top:.5rem; padding-right:.5rem; padding-left:1rem;
+    width:calc(100% - 21.5rem);    
+  }
+
+  .srp article.silver menu{
+    width:calc(100% - 25rem);
+  }
+  
+  .srp article.platinum menu,
+  .srp article.gold menu{
+    width:calc(100% - 29.5rem);
+  } 
+
+  /*
+    SIDEBAR
+  */  
 
   aside{
     position:absolute;
-    top:-5.5rem; right:2.5rem;
+    top:-5.5rem; right:1rem;
     width:30rem;    
-  }
-
-  .hasSkin aside{
-    right:2.5rem;
   }
 
   aside div{
@@ -335,13 +383,147 @@
     background:#FFF; border:1px solid #e3e3e3;
   }
 
+  /*
+    Adv skin needs some adjustements
+  */
+
+  .hasSkin .srp section > .sw{
+    padding:0 1rem;
+    width:96rem;
+    background:#f1f1f1;
+  }   
+
+  .hasSkin .srp article{
+    padding:.5rem .5rem .5rem 22.5rem;
+    width:calc(100% - 31rem); height:16rem;
+  }  
+
+  .hasSkin .srp article.silver{
+    padding-left:26rem;
+    height:18.6rem;
+  }
+  
+  .hasSkin .srp article.platinum,
+  .hasSkin .srp article.gold{
+    padding-left:30.4rem;
+    height:21.9rem;
+  } 
+
+  .hasSkin .srp article ul.infos {
+    margin-top:.5rem;
+  }
+
+  .hasSkin .srp article p.desc {
+    margin-top:0;
+  }     
+
+  .hasSkin .srp article menu{
+    bottom:.2rem;
+    padding-top:.5rem;padding-right:.5rem; padding-left:1rem;
+    width:calc(100% - 21.4rem);    
+  }
+
+  .hasSkin .srp article.silver menu{
+    width:calc(100% - 24.9rem);
+  }
+  
+  .hasSkin .srp article.platinum menu,
+  .hasSkin .srp article.gold menu{
+    width:calc(100% - 29.4rem);
+  }   
+
+  .hasSkin aside{
+    right:1rem;
+  }  
+
+}
+
+@media screen and (min-width: 1050px) { /* Desktop */
+
+  .srp section > .sw{
+    padding:0 2.5rem;
+  }   
+
+  .srp article{
+    margin:1.5rem 0 0; padding:1.5rem 1.5rem 1.5rem 25.7rem;
+    width:calc(100% - 31.5rem); height:18rem;
+  }  
+
+  .srp article.silver{
+    padding-left:31.8rem;
+    height:22.5rem;
+  }
+  
+  .srp article.platinum,
+  .srp article.gold{
+    padding-left:37.2rem;
+    height:26.5rem;
+  }    
+
+  .srp article p.desc,
+  .srp article ul.infos{
+    margin-top: 1rem;
+  }  
+
+  .srp article.silver p.desc{
+    display:block;
+  }    
+
+  .srp article ul.infos li{
+    margin-left:.5rem;
+    font-size:1.6rem;
+  }
+
+  .srp article ul.infos li:first-of-type{
+    font-size:1.8rem;
+  }
+
+  .srp article ul.infos li span{
+    font-size:1.1rem;
+  } 
+
+  /*
+    Agency infos + Actions
+  */
+
+  .srp article menu{
+    bottom:.8rem;
+    padding-top:1rem; padding-right:1.5rem; padding-left:1.5rem;
+    width:calc(100% - 24.2rem);
+  }  
+
+  .srp article.silver p.desc{
+    display:none;
+  }
+
+  .srp article.silver menu{
+    width:calc(100% - 30.3rem);
+  }
+  
+  .srp article.platinum menu,
+  .srp article.gold menu{
+    width:calc(100% - 35.7rem);
+  }  
+
+  aside{
+    right:2.5rem;
+  }  
+
 }
 
 @media screen and (min-width: 1300px) { /* Desktop */
 
+  /*
+    PAGE FORMATTING
+  */
+
   .srp section > .sw {
     padding:0;
   }
+
+  /*
+    SIDEBAR
+  */  
 
   aside{
     right:0;

@@ -3,14 +3,14 @@
 */
 
 .srp section > .sw {
-  padding:0 .5rem;
+  padding:0 .5rem 5rem;
 }
 
 /*
   ARTICLE
 */
 
-.srp article{
+article{
   position:relative;
   margin:.5rem 0 0; padding:1rem 1rem .8rem;
   background:#FFF; border:1px solid #e3e3e3;  
@@ -18,32 +18,32 @@
 
 /* flex - easy elements order config */
 
-.srp article > div{
+article > div{
   display:flex;
   flex-direction:column;  
 }
 
-.srp article figure{
+article figure{
   order:1;
 }
 
-.srp article ul.infos{
+article ul.infos{
   order:2;
 }
 
-.srp article h1{
+article h1{
   order:3;
 }
 
-.srp article p.propertyType{
+article p.propertyType{
   order:4;
 }
 
-.srp article p.desc{
+article p.desc{
   order:5;
 }
 
-.srp article menu{
+article menu{
   order:6;
 }
 
@@ -51,46 +51,46 @@
   Article elements formatting
 */
 
-.srp article h1{
+article h1{
   margin:-.1rem 0 .2rem;
   font-weight:700; font-size:1.5rem; line-height:2.3rem; color:#333f48;
 }
 
-.srp article h1 a{
+article h1 a{
   color:#333f48; text-decoration:none;
 }
 
-.srp article p{
+article p{
   margin-top:.3rem;
   font-size:1.3rem; line-height:2rem; color:#333f48;
 }
 
-.srp article p.desc{
+article p.desc{
   display:none;
 }
 
-.srp article p span{
+article p span{
   display: block; color:#6a7785;
 }
 
-.srp article ul.infos{
+article ul.infos{
   margin:.5rem 0 0;
   line-height:3rem;
 }
 
-.srp article ul.infos li{
+article ul.infos li{
   float:right;
   margin-left:.5rem;
   font-weight:700; font-size:1.6rem; color:#333f48;
 }
 
-.srp article ul.infos li:first-of-type{
+article ul.infos li:first-of-type{
   float:left;
   margin-left:0;
   font-weight:700; font-size:1.8rem; color:#333f48;
 }
 
-.srp article ul.infos li span{
+article ul.infos li span{
   font-weight:400; font-size:1.1rem; color:#6a7785;
 }
 
@@ -98,33 +98,33 @@
   Article image height scaled according to ad type
 */
 
-.srp article figure{
+article figure{
   display:block;
   margin:-1rem 0 0 -1rem;
   width:calc(100% + 2rem); height:calc( (100vw / 320) * 180);
   overflow:hidden;
 }
 
-.srp article.platinum figure,
-.srp article.platinum figure img{
+article.platinum figure,
+article.platinum figure img{
   height:calc( (100vw / 320) * 235);
 }
 
-.srp article.gold figure,
-.srp article.gold figure img{
+article.gold figure,
+article.gold figure img{
   height:calc( (100vw / 320) * 225);
 }
 
-.srp article figure a{
+article figure a{
   display:block;
   width:100%; height:100%;
 }
 
-.srp article figure img{
+article figure img{
     width:100%;
 }
 
-.srp article figure span{
+article figure span{
   position:absolute;
   top:0; left:0;
   padding:0 .5rem;
@@ -136,24 +136,24 @@
   Agency infos + Actions
 */
 
-.srp article menu{
+article menu{
   margin:1rem 0 0 -1rem; padding:1rem 1rem 0;
   width:calc(100% + 2rem);
   background:#FFF; border-top:1px solid #e3e3e3;
   overflow:hidden;
 }
 
-.srp article .agency{
+article .agency{
   float:left;
 }
 
-.srp article .agency img{
+article .agency img{
   display:block;
   max-width:120px;
   border:1px solid #f1f1f1;
 }
 
-.srp article .bookmark{
+article .bookmark{
   float:right;
   margin-top:.1rem;
 }
@@ -165,7 +165,7 @@
   */
 
   .srp section > .sw {
-    padding:0 2rem;
+    padding:0 2rem 5rem;
   }
 
   /*
@@ -173,41 +173,41 @@
     Article height scaled according to ad type
   */
 
-  .srp article{
+  article{
     margin:2rem 0 0; padding:1.5rem 1.5rem 1.5rem 25.7rem;
     height:18rem;
   }
 
-  .srp article.silver{
+  article.silver{
     padding-left:31.8rem;
     height:22.5rem;
   }
   
-  .srp article.platinum,
-  .srp article.gold{
+  article.platinum,
+  article.gold{
     padding-left:37.2rem;
     height:26.5rem;
   }  
 
   /* flex - easy elements order config */
 
-  .srp article h1{
+  article h1{
     order:1;
   }
 
-  .srp article p.propertyType{
+  article p.propertyType{
     order:2;
   }
 
-  .srp article ul.infos{
+  article ul.infos{
     order:3;
   }
 
-  .srp article p.desc{
+  article p.desc{
     order:4;
   }  
 
-  .srp article figure{
+  article figure{
     order:5;
   }  
 
@@ -215,25 +215,25 @@
     Article elements formatting
   */  
 
-  .srp article h1{
+  article h1{
     margin:0;
     font-size:1.6rem; line-height:2.4rem;
   }  
 
-  .srp article ul.infos{
+  article ul.infos{
     margin-top:1rem;
   }
 
-  .srp article ul.infos li:first-of-type{
+  article ul.infos li:first-of-type{
     font-size:2rem;
   }  
 
-  .srp article p.desc{
+  article p.desc{
     display:block;
     margin-top:1rem;
   }   
 
-  .srp article.standard p.desc{
+  article.standard p.desc{
     display:none;
   }     
 
@@ -241,16 +241,16 @@
     completely change image styling
   */
 
-  .srp article figure,
-  .srp article.platinum figure,
-  .srp article.gold figure{
+  article figure,
+  article.platinum figure,
+  article.gold figure{
     position:absolute;
     top:0; left:0;
     margin:0;
     width:auto; height:100%;
   }
 
-  .srp article figure img{
+  article figure img{
     width:auto; max-height:100%;
   }
 
@@ -258,23 +258,23 @@
     Agency infos + Actions
   */
 
-  .srp article menu{
+  article menu{
     position:absolute;
     bottom:1rem; right:0;
     padding-right:1.5rem; padding-left:1.5rem;
     width:calc(100% - 24.2rem);
   }  
 
-  .srp article.silver p.desc{
+  article.silver p.desc{
     display:none;
   }
 
-  .srp article.silver menu{
+  article.silver menu{
     width:calc(100% - 30.3rem);
   }
   
-  .srp article.platinum menu,
-  .srp article.gold menu{
+  article.platinum menu,
+  article.gold menu{
     width:calc(100% - 35.7rem);
   }    
 
@@ -282,7 +282,7 @@
 
 @media screen and (min-width: 768px) { /* Tablet */
 
-  .srp article.silver p.desc{
+  article.silver p.desc{
     margin-top:0;
     display:block;
   }
@@ -295,81 +295,120 @@
     PAGE FORMATTING
   */
 
-  .srp section{
-    margin-bottom:5rem;
-  }
-
   .srp section > .sw {
     position:relative;
-    padding:0 1rem;
+    padding:0 1rem 5rem;
   }
 
   /*
     ARTICLE
   */  
 
-  .srp article{
+  article{
     margin:1rem 0 0; padding:.5rem 1rem .5rem 22.5rem;
     width:calc(100% - 31rem); height:16rem;
   }
 
-  .srp article.silver{
+  article.silver{
     padding-left:26rem;
     height:18.6rem;
   }
   
-  .srp article.platinum,
-  .srp article.gold{
+  article.platinum,
+  article.gold{
     padding-left:30.4rem;
     height:21.9rem;
   }
 
-  .srp article ul.infos{
+  article ul.infos{
     margin-top:.5rem;
   }  
 
-  .srp article ul.infos li{
+  article ul.infos li{
     float:right;
     margin-left:.5rem;
     font-weight:700; font-size:1.6rem; color:#333f48;
   }
 
-  .srp article ul.infos li:first-of-type{
+  article ul.infos li:first-of-type{
     float:left;
     margin-left:0;
     font-weight:700; font-size:1.8rem; color:#333f48;
   }
 
-  .srp article ul.infos li span{
+  article ul.infos li span{
     font-weight:400; font-size:1.1rem; color:#6a7785;
   }  
 
-  .srp article p.desc{
+  article p.desc{
     margin-top:0;
   }
 
-  .srp article.silver p.desc{
+  article.silver p.desc{
     display:none;
   }
 
-  .srp article menu{
+  article menu{
     bottom:.2rem;
     padding-top:.5rem; padding-right:.5rem; padding-left:1rem;
     width:calc(100% - 21.5rem);    
   }
 
-  .srp article.silver menu{
+  article.silver menu{
     width:calc(100% - 25rem);
   }
   
-  .srp article.platinum menu,
-  .srp article.gold menu{
+  article.platinum menu,
+  article.gold menu{
     width:calc(100% - 29.5rem);
   } 
 
   /*
+    PAGINATOR
+  */
+
+  .pagination{
+    margin:2.5rem 0 0;
+    width:calc(100% - 31rem);
+  }
+
+  .pagination ul{
+    margin:0 auto;
+    width:42rem;
+    overflow:hidden;
+  }  
+
+  .pagination li{
+    float:left;
+    margin:0 .5rem;
+    font-weight:700; font-size:1.4rem; line-height:3rem; text-align:center;    
+  }  
+
+  .pagination li a{
+    display:block;
+    width:3rem; height:3rem;
+    color:#6a7785; text-decoration:none;
+    background:#FFF; border:1px solid #FFF;
+  }
+
+  .pagination li a:hover{
+    color:#333f48;
+    border:1px solid #e3e3e3;
+  }
+
+  .pagination li a.prev,
+  .pagination li a.next{
+    width:6rem;
+  }  
+
+  .pagination li a.current{
+    color:#FFF;
+    background:#e4002b;
+  }
+
+  /*
     SIDEBAR
-  */  
+  */
 
   aside{
     position:absolute;
@@ -383,6 +422,28 @@
     background:#FFF; border:1px solid #e3e3e3;
   }
 
+  aside h3{
+    margin-bottom:.5rem;
+    font-size:1.6rem; font-family:'Museo-Sans-500'; color:#333f48;
+  }
+
+  aside ul{
+    font-size:1.4rem; line-height:1.8rem;
+  }
+
+  aside li{
+    padding:.5rem 0 0;
+  }
+
+  aside ul a{
+    display:block;
+    color:#6a7785; text-decoration:none;
+  }  
+
+  aside ul a:hover{
+    color:#333f48;
+  }
+
   /*
     Adv skin needs some adjustements
   */
@@ -393,43 +454,43 @@
     background:#f1f1f1;
   }   
 
-  .hasSkin .srp article{
+  .hasSkin article{
     padding:.5rem .5rem .5rem 22.5rem;
     width:calc(100% - 31rem); height:16rem;
   }  
 
-  .hasSkin .srp article.silver{
+  .hasSkin article.silver{
     padding-left:26rem;
     height:18.6rem;
   }
   
-  .hasSkin .srp article.platinum,
-  .hasSkin .srp article.gold{
+  .hasSkin article.platinum,
+  .hasSkin article.gold{
     padding-left:30.4rem;
     height:21.9rem;
   } 
 
-  .hasSkin .srp article ul.infos {
+  .hasSkin article ul.infos {
     margin-top:.5rem;
   }
 
-  .hasSkin .srp article p.desc {
+  .hasSkin article p.desc {
     margin-top:0;
   }     
 
-  .hasSkin .srp article menu{
+  .hasSkin article menu{
     bottom:.2rem;
     padding-top:.5rem;padding-right:.5rem; padding-left:1rem;
-    width:calc(100% - 21.4rem);    
+    width:calc(100% - 21.5rem);    
   }
 
-  .hasSkin .srp article.silver menu{
-    width:calc(100% - 24.9rem);
+  .hasSkin article.silver menu{
+    width:calc(100% - 25rem);
   }
   
-  .hasSkin .srp article.platinum menu,
-  .hasSkin .srp article.gold menu{
-    width:calc(100% - 29.4rem);
+  .hasSkin article.platinum menu,
+  .hasSkin article.gold menu{
+    width:calc(100% - 29.5rem);
   }   
 
   .hasSkin aside{
@@ -441,44 +502,44 @@
 @media screen and (min-width: 1050px) { /* Desktop */
 
   .srp section > .sw{
-    padding:0 2.5rem;
+    padding:0 2.5rem 5rem;
   }   
 
-  .srp article{
+  article{
     margin:1.5rem 0 0; padding:1.5rem 1.5rem 1.5rem 25.7rem;
     width:calc(100% - 31.5rem); height:18rem;
   }  
 
-  .srp article.silver{
+  article.silver{
     padding-left:31.8rem;
     height:22.5rem;
   }
   
-  .srp article.platinum,
-  .srp article.gold{
+  article.platinum,
+  article.gold{
     padding-left:37.2rem;
     height:26.5rem;
   }    
 
-  .srp article p.desc,
-  .srp article ul.infos{
+  article p.desc,
+  article ul.infos{
     margin-top: 1rem;
   }  
 
-  .srp article.silver p.desc{
+  article.silver p.desc{
     display:block;
   }    
 
-  .srp article ul.infos li{
+  article ul.infos li{
     margin-left:.5rem;
     font-size:1.6rem;
   }
 
-  .srp article ul.infos li:first-of-type{
+  article ul.infos li:first-of-type{
     font-size:1.8rem;
   }
 
-  .srp article ul.infos li span{
+  article ul.infos li span{
     font-size:1.1rem;
   } 
 
@@ -486,22 +547,22 @@
     Agency infos + Actions
   */
 
-  .srp article menu{
+  article menu{
     bottom:.8rem;
     padding-top:1rem; padding-right:1.5rem; padding-left:1.5rem;
     width:calc(100% - 24.2rem);
   }  
 
-  .srp article.silver p.desc{
+  article.silver p.desc{
     display:none;
   }
 
-  .srp article.silver menu{
+  article.silver menu{
     width:calc(100% - 30.3rem);
   }
   
-  .srp article.platinum menu,
-  .srp article.gold menu{
+  article.platinum menu,
+  article.gold menu{
     width:calc(100% - 35.7rem);
   }  
 
@@ -518,7 +579,7 @@
   */
 
   .srp section > .sw {
-    padding:0;
+    padding:0 0 5rem;
   }
 
   /*

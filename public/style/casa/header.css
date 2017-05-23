@@ -293,6 +293,10 @@
 
 @media screen and (min-width: 1300px) { /* Desktop */
 
+  #header .sw{
+    padding-right:0;    
+  }
+
   /*
     LEADERBOARD - FAKE
   */    

@@ -1,4 +1,16 @@
 /*
+  text dark grey: 333f48;
+  text light grey: #6a7785;
+  
+  text footer grey: #9b9b9b;
+
+  red: #e4002b;
+  darker red: #a30000;
+
+  border standard: #e3e3e3;
+*/
+
+/*
   HEADER
 */
 
@@ -103,6 +115,7 @@
   #header{
     position:fixed;
     top:0; left:0;
+    z-index:22  ;
   }
 
   /*

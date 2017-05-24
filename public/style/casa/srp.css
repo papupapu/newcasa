@@ -1,4 +1,16 @@
 /*
+  text dark grey: 333f48;
+  text light grey: #6a7785;
+  
+  text footer grey: #9b9b9b;
+
+  red: #e4002b;
+  darker red: #a30000;
+
+  border standard: #e3e3e3;
+*/
+
+/*
   PAGE FORMATTING
 */
 
@@ -175,7 +187,7 @@ article .bookmark{
   SIDEBAR
 */
 
-aside div{
+aside > div{
   width:0; height:0;
   overflow:hidden;
 }
@@ -439,8 +451,8 @@ aside div{
     width:30rem;    
   }
 
-  aside div{
-    margin-bottom:1.5rem; padding:1.5rem;
+  aside > div{
+    margin-bottom:1rem; padding:1.5rem;
     width:calc(100% - .2rem); height:auto;
     background:#FFF; border:1px solid #e3e3e3;
     overflow:visible;
@@ -613,5 +625,9 @@ aside div{
   aside{
     right:0;
   }  
+
+  aside > div{
+    margin-bottom:1.5rem;
+  }
 
 }

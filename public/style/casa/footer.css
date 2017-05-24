@@ -1,3 +1,15 @@
+/*
+  text dark grey: 333f48;
+  text light grey: #6a7785;
+  
+  text footer grey: #9b9b9b;
+
+  red: #e4002b;
+  darker red: #a30000;
+
+  border standard: #e3e3e3;
+*/
+
 #footer {
 	position:absolute;
 	bottom:0; left:0;
@@ -6,7 +18,7 @@
 }
 
 .footer-links{
-	font:700 1.3rem/6rem 'Museo-Sans-500';
+	font:700 1.6rem/6rem 'Museo-Sans-500';
 	overflow:hidden;
 }
 
@@ -42,13 +54,13 @@
 }
 
 .intl{
-	height:4.5rem;
+	height:6rem;
 	text-align:center;
 	background:#F1F1F1; border-top:1px solid #e3e3e3; border-bottom:1px solid #e3e3e3;
 }
 
 .intl p{
-	font-size:1.2rem; line-height:4.5rem; color:#9b9b9b;
+	font-size:1.2rem; line-height:6rem; color:#9b9b9b;
 }
 
 .intl p strong{
@@ -78,8 +90,8 @@
 	
 
 	.footer-links{
-		line-height:3rem;		
-		text-align:center;
+		padding:.5rem 0 2rem;
+		font-size:1.3rem; line-height:2.4rem;	text-align:center;
 	}
 
 	.footer-links li.noMob{
@@ -92,6 +104,18 @@
 		width:auto;
 	}
 
+	.social-links{
+		margin-bottom:2rem;
+	}
+
+	.intl{
+		height:4.5rem;
+	}
+
+	.intl p{
+		line-height:4.5rem;
+	}	
+
 	.legal{
 		padding:0;
 		font-size:1.2rem; line-height:5.5rem; color:#6a7785; text-align:center;
@@ -99,7 +123,7 @@
 
 }
 
-@media screen and (min-width: 950px) { /* Desktop */
+@media screen and (min-width: 1050px) { /* Desktop */
 
 	.footer-links{
 		line-height:6rem;
@@ -110,6 +134,7 @@
 	}
 
 	.social-links{
+		margin-bottom:2.5rem;
 		width:auto;
 		overflow:hidden;
 	}
@@ -130,5 +155,13 @@
 	.legal{
 		line-height:3.6rem;
 	}	
+
+}
+
+@media screen and (min-width: 1300px) { /* Desktop */
+
+	#footer > .sw{
+		padding:0;
+	}
 
 }

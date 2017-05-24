@@ -92,6 +92,7 @@
 					<!-- HEADING  -->
 
 					<link rel="stylesheet" href="/style/casa/star.css" type="text/css">
+					<link rel="stylesheet" href="/style/casa/search.css" type="text/css">
 					<link rel="stylesheet" href="/style/casa/srp/intro.css" type="text/css">
 					
 					<header id="intro">
@@ -133,7 +134,85 @@
 
 							<!-- search  -->
 
-							<div class="search"></div>
+							<div class="search">
+								<form action="/">
+									<div class="qscontainer">
+										<input id="qs" type="text" value="" placeholder="Es. Milano o 20121 o Via Mercato, Milano" />
+										<div class="suggestions">
+											<h3>suggerimenti:</h3>
+											<ul>
+												<li class="over hasZones">
+													<a href="" title=""><span><strong>Mil</strong>ano</span> (provincia)</a>
+												</li>
+												<li class="hasZones">
+													<a href="" title=""><span><strong>Mil</strong>ano</span> (MI)</a>
+												</li>
+												<li>
+													<a href="" title=""><span><strong>Mil</strong>azzo</span> (ME)</a>
+												</li>
+												<li>
+													<a href="" title=""><span><strong>Mil</strong>lesimo</span> (SV)</a>
+												</li>
+												<li>
+													<a href="" title=""><span><strong>Mil</strong>o</span> (CT)</a>
+												</li>
+												<li>
+													<a href="" title=""><span><strong>Mil</strong>zano</span> (BS)</a>
+												</li>
+												<li>
+													<a href="" title=""><span><strong>Mil</strong>eto</span> (VV)</a>
+												</li>
+												<li>
+													<a href="" title=""><span><strong>Mil</strong>ena</span>(CL)</a>
+												</li>
+												<li>
+													<a href="" title=""><span><strong>Mil</strong>is</span> (OR)</a>
+												</li>
+												<li>
+													<a href="" title=""><span>Cusano <strong>Mil</strong>anino</span> (MI)</a>
+												</li>
+												<li>
+													<a href="" title=""><span>Altavilla <strong>Mil</strong>icia</span> (PA)</a>
+												</li>
+												<li>
+													<a href="" title=""><span>Garbagnate <strong>Mil</strong>anese</span> (MI)</a>
+												</li>
+												<li>
+													<a href="" title=""><span>Nova <strong>Mil</strong>anese</span> (MB)</a>
+												</li>
+												<li>
+													<a href="" title=""><span>Rodì <strong>Mil</strong>ici</span> (ME)</a>
+												</li>
+												<li>
+													<a href="" title=""><span>Novate <strong>Mil</strong>anese</span> (MI)</a>
+												</li>
+												<li>
+													<a href="" title=""><span>Pogliano <strong>Mil</strong>anese</span>(MI)</a>
+												</li>
+												<li>
+													<a href="" title=""><span>Pregnana <strong>Mil</strong>anese</span>(MI)</a>
+												</li>
+												<li>
+													<a href="" title=""><span>Settimo <strong>Mil</strong>anese</span> (MI)</a>
+												</li>
+												<li>
+													<a href="" title=""><span><strong>Mil</strong>itello Rosmarino</span> (ME)</a>
+												</li>
+												<li>
+													<a href="" title=""><span>Sant'Agata di <strong>Mil</strong>itello</span>(ME)</a>
+												</li>
+												<li>
+													<a href="" title=""><span>San Donato <strong>Mil</strong>anese</span> (MI)</a>
+												</li>
+												<li>
+													<a href="" title=""><span>San Giuliano <strong>Mil</strong>anese</span>(MI)</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<input id="searchsubmit" type="submit" value="Cerca" />
+								</form>
+							</div>
 
 							<!-- generic lead / bookmark -->
 							
@@ -367,10 +446,204 @@
 
 
 							<!-- FILTERS -->
-
+							<link rel="stylesheet" href="/style/casa/filters/select.css" type="text/css">
+							<link rel="stylesheet" href="/style/casa/filters/checkbox.css" type="text/css">
 							<link rel="stylesheet" href="/style/casa/filters.css" type="text/css">
 							<div class="filters">
-								<h3>Imposta filtri</h3>
+								<h3>
+									<strong>Imposta filtri</strong>
+									<span>Impostati (<em>0</em>)</span>
+								</h3>
+
+								<!-- sez -->
+								<div class="sez sez1">
+
+										<div class="select">
+											<p>Categoria</p>
+											<a class="handle" href="" title="">Residenziale</a>
+											<ul>
+												<li><a class="selected" href="" title="">Residenziale</a></li>
+												<li><a href="" title="">Commerciale</a></li>
+												<li><a href="" title="">Vacanze</a></li>
+												<li><a class="confirm" href="" title="">OK</a></li>
+											</ul>
+										</div>
+
+								</div>
+
+								<!-- sez -->
+								<div class="sez sez2">
+									<div class="couple">
+
+										<div class="select">
+											<p>Categoria</p>
+											<a class="handle" href="" title="">Residenziale</a>
+											<ul>
+												<li><a class="selected" href="" title="">Residenziale</a></li>
+												<li><a href="" title="">Commerciale</a></li>
+												<li><a href="" title="">Vacanze</a></li>
+											</ul>
+										</div>
+
+										<div class="select">
+											<p>Categoria</p>
+											<a class="handle" href="" title="">Residenziale</a>
+											<ul>
+												<li><a class="selected" href="" title="">Residenziale</a></li>
+												<li><a href="" title="">Commerciale</a></li>
+												<li><a href="" title="">Vacanze</a></li>
+											</ul>
+										</div>
+
+									</div>
+								</div>
+
+								<!-- sez -->
+								<div class="sez">
+									<div class="couple sez3">
+
+										<div class="select">
+											<p>Categoria</p>
+											<a class="handle" href="" title="">Residenziale</a>
+											<ul>
+												<li><a class="selected" href="" title="">Residenziale</a></li>
+												<li><a href="" title="">Commerciale</a></li>
+												<li><a href="" title="">Vacanze</a></li>
+											</ul>
+										</div>
+
+										<div class="select">
+											<p>Categoria</p>
+											<a class="handle" href="" title="">Residenziale</a>
+											<ul>
+												<li><a class="selected" href="" title="">Residenziale</a></li>
+												<li><a href="" title="">Commerciale</a></li>
+												<li><a href="" title="">Vacanze</a></li>
+											</ul>
+										</div>
+
+									</div>
+									<div class="couple sez4">
+
+										<div class="select">
+											<p>Categoria</p>
+											<a class="handle" href="" title="">Residenziale</a>
+											<ul>
+												<li><a class="selected" href="" title="">Residenziale</a></li>
+												<li><a href="" title="">Commerciale</a></li>
+												<li><a href="" title="">Vacanze</a></li>
+											</ul>
+										</div>
+
+										<div class="select">
+											<p>Categoria</p>
+											<a class="handle" href="" title="">Residenziale</a>
+											<ul>
+												<li><a class="selected" href="" title="">Residenziale</a></li>
+												<li><a href="" title="">Commerciale</a></li>
+												<li><a href="" title="">Vacanze</a></li>
+											</ul>
+										</div>
+
+									</div>									
+								</div>
+
+								<!-- sez -->
+								<div class="sez">
+									<div class="triplet sez5">
+
+										<div class="select">
+											<p>Categoria</p>
+											<a class="handle" href="" title="">Scegli</a>
+											<ul>
+												<li><a class="selected" href="" title="">Residenziale</a></li>
+												<li><a href="" title="">Commerciale</a></li>
+												<li><a href="" title="">Vacanze</a></li>
+											</ul>
+										</div>
+
+										<div class="select">
+											<p>Categoria</p>
+											<a class="handle" href="" title="">Scegli</a>
+											<ul>
+												<li><a class="selected" href="" title="">Residenziale</a></li>
+												<li><a href="" title="">Commerciale</a></li>
+												<li><a href="" title="">Vacanze</a></li>
+											</ul>
+										</div>
+
+										<div class="select">
+											<p>Categoria</p>
+											<a class="handle" href="" title="">Scegli</a>
+											<ul>
+												<li><a class="selected" href="" title="">Residenziale</a></li>
+												<li><a href="" title="">Commerciale</a></li>
+												<li><a href="" title="">Vacanze</a></li>
+											</ul>
+										</div>
+
+									</div>
+									<div class="couple sez6">
+
+										<div class="select">
+											<p>Categoria</p>
+											<a class="handle" href="" title="">Residenziale</a>
+											<ul>
+												<li><a class="selected" href="" title="">Residenziale</a></li>
+												<li><a href="" title="">Commerciale</a></li>
+												<li><a href="" title="">Vacanze</a></li>
+											</ul>
+										</div>
+
+										<div class="select">
+											<p>Categoria</p>
+											<a class="handle" href="" title="">Residenziale</a>
+											<ul>
+												<li><a class="selected" href="" title="">Residenziale</a></li>
+												<li><a href="" title="">Commerciale</a></li>
+												<li><a href="" title="">Vacanze</a></li>
+											</ul>
+										</div>
+
+									</div>									
+								</div>
+
+								<!-- sez -->
+								<div class="sez">
+									<div class="oddcouple sez7">
+
+										<div class="select">
+											<p>Categoria</p>
+											<a class="handle" href="" title="">Residenziale</a>
+											<ul>
+												<li><a class="selected" href="" title="">Residenziale</a></li>
+												<li><a href="" title="">Commerciale</a></li>
+												<li><a href="" title="">Vacanze</a></li>
+											</ul>
+										</div>
+
+										<div class="checkbox">
+											<div class="check"></div>
+											Solo annunci con foto
+										</div>
+
+									</div>
+									<div class="triplet sez8">
+										<div class="checkbox">
+											<div class="check"></div>
+											Checkbox
+										</div>
+										<div class="checkbox">
+											<div class="check"></div>
+											Checkbox
+										</div>
+										<div class="checkbox">
+											<div class="check checked"></div>
+											Checkbox
+										</div>																				
+									</div>
+								</div>
+
 							</div>
 
 							<!-- generic box -->

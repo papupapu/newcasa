@@ -1,0 +1,88 @@
+/*
+  text dark grey: 333f48;
+  text light grey: #6a7785;
+  
+  text footer grey: #9b9b9b;
+
+  red: #e4002b;
+  darker red: #a30000;
+
+  border standard: #e3e3e3;
+*/
+
+.search{
+  position:fixed; z-index:21;
+  top:0; left:0;
+  width:100vw; height:100%;
+  background:#FFF;
+  transform: translate(100%, 0);
+}
+
+
+@media screen and (min-width: 736px) { /* Tablet */
+
+  .search{
+    position:static;
+    top:auto; left:auto;
+    width:auto; height:auto;
+    transform: translate(0, 0);
+  }
+
+  .search form{
+    display:block;
+    width:100%; height:100%;
+  }
+
+  .search .qscontainer{
+    float:left; position:relative;
+    width:calc(100% - 15rem); height:100%;
+    background:#f1f1f1; border:1px solid #e1e1e1;
+  }
+
+  .search .qscontainer #qs{
+    padding:0 1rem;
+    width:100%; height:100%;
+    font-size:1.6rem;
+    background:transparent; border:0 none;
+    outline: none;
+  }
+
+  .search .suggestions{
+    display:none;
+    position:absolute; z-index:11;
+    top:calc(100% + .1rem); left:-.1rem;
+    padding-top:1rem;
+    width:calc(100% + .2rem); max-height:29.5rem;
+    background:#f1f1f1; border:1px solid #e1e1e1; border-top:0 none;
+    overflow-y:auto;
+  }
+
+  .search .suggestions h3{
+    margin:0 .5rem; padding:0 .5rem;
+    font:1.2rem/2.8rem 'Museo-Sans-700'; color:#333f48; text-decoration:none; text-transform:uppercase;
+  }
+
+  .search .suggestions a{
+    display:block;
+    margin:0 .5rem; padding:0 .5rem;
+    font:1.4rem/2.8rem 'Museo-Sans-300'; color:#333f48; text-decoration:none;
+  }
+
+  .search .suggestions a:hover{
+    color:#296dd3;
+    background:#dfecf8; border-radius:.2rem;
+  }
+
+  .search #searchsubmit{
+    width:15rem; height:100%;
+    font-size:1.4rem; font-family:'Museo-Sans-500'; color:#FFF; text-transform:uppercase;
+    background:#e4002b; border:0 none; border-radius:0 1px 1px 0;
+    transition: background .15s linear;
+    cursor:pointer;
+  }
+
+  .search #searchsubmit:hover{
+    background:#a30000;
+  }
+
+}

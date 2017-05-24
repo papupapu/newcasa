@@ -1,0 +1,146 @@
+/*
+  text dark grey: 333f48;
+  text light grey: #6a7785;
+  
+  text footer grey: #9b9b9b;
+
+  red: #e4002b;
+  darker red: #a30000;
+
+  border standard: #e3e3e3;
+*/
+
+.filters{
+  position:fixed; z-index:20;
+  top:0; right:0;
+  width:100vw; height:100vh;
+  background:#FFF;
+  transform:translate(100%, 0);
+}
+
+@media screen and (min-width: 950px) { /* Desktop */
+
+  .filters{
+    position:static;
+    top:auto; right:auto;
+    padding-bottom:.8rem;
+    width:30rem; height:auto;
+    overflow:hidden;
+    transform:translate(0, 0);
+  }
+
+  /* title area */
+
+  .filters h3{
+    margin-bottom:2.3rem;
+    text-align:right;
+  }
+
+  .filters h3 strong{
+    float:left;
+    font-weight:700;
+  }
+
+  .filters h3 span{
+    font-size:1.3rem; color:#6a7785;
+  }
+
+  .filters em{
+    font-style:normal;
+  }
+
+  /* lines */
+
+  .sez{
+    float:left;
+    width:100%;
+    margin-bottom:1.5rem;
+  }
+
+  .couple,
+  .oddcouple{
+    float:left;
+    margin-top:1rem;
+    width:100%;    
+  }
+
+  .couple > div{
+    float:left;
+    width:calc(50% - .8rem);    
+  }
+
+  .couple > div:last-of-type{
+    float:right;
+  }
+
+  .oddcouple > div{
+    float:left;
+    width:11.5rem;    
+  }
+
+  .oddcouple > div:last-of-type{
+    float:right;
+    width:calc(100% - 13rem);
+  }     
+
+  .triplet{
+    float:left;
+    margin-top:1rem;
+    width:100%;    
+  }
+
+  .triplet > div{
+    float:left;
+    width:calc((100% / 3) - 1rem);    
+  }
+
+  .triplet > div:nth-of-type(2){
+    margin:0 1.5rem 0;
+  }
+
+  .triplet > div.select:nth-of-type(2){
+    margin:1.7rem 1.5rem 0;
+  }   
+
+  .sez1{
+    position:relative;
+    z-index:8;
+  }
+
+  .sez2{
+    position:relative;
+    z-index:7;
+  }
+
+  .sez3{
+    position:relative;
+    z-index:6;
+  }
+
+  .sez4{
+    position:relative;
+    z-index:5;
+  }
+
+  .sez5{
+    position:relative;
+    z-index:4;
+  }
+
+  .sez6{
+    position:relative;
+    z-index:3;
+  }
+
+  .sez7{
+    position:relative;
+    z-index:2;
+  }
+
+  .sez8{
+    position:relative;
+    z-index:1;
+  }  
+
+
+}

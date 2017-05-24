@@ -111,7 +111,6 @@
   transform:translate(-50%, -50%);
 }
 
-
 @media screen and (min-width: 736px) { /* Tablet */
 
   /*
@@ -133,20 +132,20 @@
     overflow:hidden;
   }
 
-  #intro li{
+  #intro ol li{
     float:left;
   }
 
-  #intro li a{
+  #intro ol li a{
     color:#6a7785;
   }
 
-  #intro li > span{
+  #intro ol li > span{
     padding:0 .7rem 0 .2rem;
   }
 
-  #intro li a:hover,
-  #intro li:last-of-type a{
+  #intro ol li a:hover,
+  #intro ol li:last-of-type a{
     color:#333f48; text-decoration:none;
   }   
 
@@ -200,9 +199,8 @@
 
   .search{
     position:absolute;
-    top:0rem; left:0;
-    width:calc(100% - 28.5rem); height:3.3rem;
-    background:#f1f1f1;
+    top:0; left:0;
+    width:calc(100% - 28.5rem); height:3.3rem;    
   }
 
   /*

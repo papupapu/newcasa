@@ -11,7 +11,7 @@
 */
 
 .checkbox{
-  font:1.2rem/3.7rem 'Museo-Sans-300'; color:#6a7785;
+  font:1.2rem/2.5rem 'Museo-Sans-300'; color:#6a7785;
 }
 
 .oddcouple .checkbox{
@@ -21,8 +21,8 @@
 
 .checkbox .check{
   float:left;
-  margin:1rem .5rem 0 0;
-  width:1.5rem; height:1.5rem;
+  margin:0 .5rem 0 0;
+  width:2.5rem; height:2.5rem;
   border:1px solid #cad0d6; border-radius:3px;
 }
 
@@ -34,13 +34,32 @@
 .checkbox .check.checked:after {
   content: "";
   position: absolute;
-  right:.4rem;
-  top:.1rem;
-  width: 4px; height: 7px;
+  right:.9rem;
+  top:.4rem;
+  width: 5px; height: 10px;
   border-bottom: 1px solid #FFF;
   border-right: 1px solid #FFF;
   transform: rotate(45deg);
   -o-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
+}
+
+@media screen and (min-width: 768px) { /* Tablet */
+
+  .checkbox{
+    line-height:1.5rem;
+  }
+
+  .checkbox .check{
+    margin:1rem .5rem 0 0;
+    width:1.5rem; height:1.5rem;
+  }
+
+  .checkbox .check.checked:after {
+    right:.4rem;
+    top:.1rem;
+    width: 4px; height: 7px;
+  }  
+
 }

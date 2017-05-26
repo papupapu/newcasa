@@ -152,13 +152,13 @@
   .suggestions{
     position:absolute; z-index:11;
     top:calc(100% + .1rem); left:-.1rem;
-    padding-top:1rem; padding-bottom:0;
+    padding-bottom:0;
     width:calc(100% + .2rem); height:auto; max-height:29.5rem;
     background:#f1f1f1; border:1px solid #e1e1e1; border-top:0 none;    
   }
 
   .suggestions h3{
-    margin:0 .5rem; padding:0 .5rem;
+    margin:1rem .5rem 0; padding:0 .5rem;
     font:1.2rem/2.8rem 'Museo-Sans-700'; color:#333f48; text-decoration:none; text-transform:uppercase;
   }
 
@@ -171,6 +171,10 @@
   .suggestions a:hover{
     color:#296dd3;
     background:#dfecf8; border-radius:.2rem;
+  }
+
+  .suggestions-menu{
+    display:none;
   }
 
 }

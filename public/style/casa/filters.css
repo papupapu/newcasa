@@ -11,11 +11,26 @@
 */
 
 .filters{
-  position:fixed; z-index:20;
+  position:fixed; z-index:21;
   top:0; right:0;
   width:100vw; height:100vh;
-  background:#FFF;
-  transform:translate(100%, 0);
+  background:#FFF; border-top:solid 3px #e3e3e3;
+  /*transform:translate(100%, 0);*/
+  transform:translate(0, 9.4rem);
+}
+
+.filters h3{
+  float:left;
+  padding:1rem;
+  width:100%;  
+  background:#f1f1f1;
+}
+
+.filters .sez{
+  float:left;
+  padding:2rem 1rem 1.5rem;
+  width:100%;
+  border-bottom:solid 1px #e3e3e3;
 }
 
 @media screen and (min-width: 950px) { /* Desktop */
@@ -51,96 +66,94 @@
 
   /* lines */
 
-  .sez{
-    float:left;
-    width:100%;
-    margin-bottom:1.5rem;
+  .filters .sez{
+    margin-bottom:1.5rem; padding:0;
+    border:0 none;
   }
 
-  .couple,
-  .oddcouple{
+  .filters .couple,
+  .filters .oddcouple{
     float:left;
     margin-top:1rem;
     width:100%;    
   }
 
-  .couple > div{
+  .filters .couple > div{
     float:left;
     width:calc(50% - .8rem);    
   }
 
-  .couple > div:last-of-type{
+  .filters .couple > div:last-of-type{
     float:right;
   }
 
-  .oddcouple > div{
+  .filters .oddcouple > div{
     float:left;
     width:11.5rem;    
   }
 
-  .oddcouple > div:last-of-type{
+  .filters .oddcouple > div:last-of-type{
     float:right;
     width:calc(100% - 13rem);
   }     
 
-  .triplet{
+  .filters .triplet{
     float:left;
     margin-top:1rem;
     width:100%;    
   }
 
-  .triplet > div{
+  .filters .triplet > div{
     float:left;
     width:calc((100% / 3) - 1rem);    
   }
 
-  .triplet > div:nth-of-type(2){
+  .filters .triplet > div:nth-of-type(2){
     margin:0 1.5rem 0;
   }
 
-  .triplet > div.select:nth-of-type(2){
+  .filters .triplet > div.select:nth-of-type(2){
     margin:1.7rem 1.5rem 0;
   }   
 
-  .sez1{
+  .filters .sez1{
     position:relative;
     z-index:8;
   }
 
-  .sez2{
+  .filters .sez2{
     position:relative;
     z-index:7;
   }
 
-  .sez3{
+  .filters .sez3{
     position:relative;
     z-index:6;
   }
 
-  .sez4{
+  .filters .sez4{
     position:relative;
     z-index:5;
   }
 
-  .sez5{
+  .filters .sez5{
     position:relative;
     z-index:4;
   }
 
-  .sez6{
+  .filters .sez6{
     position:relative;
     z-index:3;
   }
 
-  .sez7{
+  .filters .sez7{
     position:relative;
     z-index:2;
   }
 
-  .sez8{
+  .filters .sez8{
     position:relative;
     z-index:1;
   }  
-
 
 }

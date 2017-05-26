@@ -140,7 +140,7 @@
 										<input id="qs" type="text" value="" placeholder="Es. Milano o 20121 o Via Mercato, Milano" />
 										<button class="close">Chiudi</button>
 										<div class="suggestions">
-											<h3>suggerimenti:</h3>
+											<!--<h3>suggerimenti:</h3>
 											<ul>
 												<li class="over hasZones">
 													<a href="" title=""><span><strong>Mil</strong>ano</span> (provincia)</a>
@@ -208,7 +208,37 @@
 												<li>
 													<a href="" title=""><span>San Giuliano <strong>Mil</strong>anese</span>(MI)</a>
 												</li>
-											</ul>
+											</ul>-->
+											<div class="suggestions-menu">
+												<a class="noChoice" href="" title="">Ovunque (tutte le località)</a>
+												<h4>Ricerche recenti</h4>
+												<ul>
+													<li>
+														<a href="" title="">
+															Certosa/ Quarto Oggiaro/ Villa Pizzone (Milano) <span>Vendita</span>
+														</a>
+													</li>
+													<li>
+														<a href="" title="">
+															Bolzano (BZ) <span>Vendita</span>
+														</a>
+													</li>
+													<li>
+														<a href="" title="">
+															Domodossola (VB) <span>Vendita</span>
+														</a>
+													</li>
+													<li>
+														<a href="" title="">
+															Refrontolo (TV) <span>Vendita | fino a €700.000</span>
+														</a>
+													</li>
+													<li>
+														<a href="" title="">
+															Bergamo (provincia) <span>Vendita</span>
+														</a>
+													</li>
+											</div>
 										</div>
 									</div>
 									<div class="searchsubmitCont">
@@ -451,199 +481,246 @@
 							<!-- FILTERS -->
 							<link rel="stylesheet" href="/style/casa/filters/select.css" type="text/css">
 							<link rel="stylesheet" href="/style/casa/filters/checkbox.css" type="text/css">
+							<link rel="stylesheet" href="/style/casa/filters/buttons.css" type="text/css">
 							<link rel="stylesheet" href="/style/casa/filters.css" type="text/css">
 							<div class="filters">
+
+								<div class="sez">
+									
+									<div class="buttons">
+										<p>Contratto</p>
+										<ul>
+											<li><a class="selected" href="" title="">Vendita</a></li>
+											<li class="mid"><a href="" title="">Affitto</a></li>
+										</ul>
+									</div>
+
+								</div>
+
+								<div class="sez">
+
+									<div class="buttons">
+										<p>Categoria</p>
+										<ul>
+											<li><a href="" title="">Residenziale</a></li>
+											<li class="mid"><a class="selected" href="" title="">Commerciale</a></li>
+											<li><a href="" title="">Vacanze</a></li>
+										</ul>
+									</div>
+
+								</div>	
+
 								<h3>
 									<strong>Imposta filtri</strong>
 									<span>Impostati (<em>0</em>)</span>
-								</h3>
+								</h3>		
 
-								<!-- sez -->
-								<div class="sez sez1">
-
-										<div class="select">
-											<p>Categoria</p>
-											<a class="handle" href="" title="">Residenziale</a>
-											<ul>
-												<li><a class="selected" href="" title="">Residenziale</a></li>
-												<li><a href="" title="">Commerciale</a></li>
-												<li><a href="" title="">Vacanze</a></li>
-												<li><a class="confirm" href="" title="">OK</a></li>
-											</ul>
-										</div>
-
-								</div>
-
-								<!-- sez -->
-								<div class="sez sez2">
-									<div class="couple">
-
-										<div class="select">
-											<p>Categoria</p>
-											<a class="handle" href="" title="">Residenziale</a>
-											<ul>
-												<li><a class="selected" href="" title="">Residenziale</a></li>
-												<li><a href="" title="">Commerciale</a></li>
-												<li><a href="" title="">Vacanze</a></li>
-											</ul>
-										</div>
-
-										<div class="select">
-											<p>Categoria</p>
-											<a class="handle" href="" title="">Residenziale</a>
-											<ul>
-												<li><a class="selected" href="" title="">Residenziale</a></li>
-												<li><a href="" title="">Commerciale</a></li>
-												<li><a href="" title="">Vacanze</a></li>
-											</ul>
-										</div>
-
-									</div>
-								</div>
-
-								<!-- sez -->
 								<div class="sez">
-									<div class="couple sez3">
 
-										<div class="select">
-											<p>Categoria</p>
-											<a class="handle" href="" title="">Residenziale</a>
-											<ul>
-												<li><a class="selected" href="" title="">Residenziale</a></li>
-												<li><a href="" title="">Commerciale</a></li>
-												<li><a href="" title="">Vacanze</a></li>
-											</ul>
-										</div>
+									<div class="buttons">
+										<p>Tipologia</p>
+										<ul>
+											<li><a class="selected" href="" title="">Tutti</a></li>
+											<li class="mid"><a href="" title="">Seleziona</a></li>
+										</ul>
+										<ul class=""></ul>
+									</div>
 
-										<div class="select">
-											<p>Categoria</p>
-											<a class="handle" href="" title="">Residenziale</a>
-											<ul>
-												<li><a class="selected" href="" title="">Residenziale</a></li>
-												<li><a href="" title="">Commerciale</a></li>
-												<li><a href="" title="">Vacanze</a></li>
-											</ul>
-										</div>
+								</div>																					
+
+								<div style="display:none">
+									<h3>
+										<strong>Imposta filtri</strong>
+										<span>Impostati (<em>0</em>)</span>
+									</h3>
+
+									<!-- sez -->
+									<div class="sez sez1">
+
+											<div class="select">
+												<p>Categoria</p>
+												<a class="handle" href="" title="">Residenziale</a>
+												<ul>
+													<li><a class="selected" href="" title="">Residenziale</a></li>
+													<li><a href="" title="">Commerciale</a></li>
+													<li><a href="" title="">Vacanze</a></li>
+													<li><a class="confirm" href="" title="">OK</a></li>
+												</ul>
+											</div>
 
 									</div>
-									<div class="couple sez4">
 
-										<div class="select">
-											<p>Categoria</p>
-											<a class="handle" href="" title="">Residenziale</a>
-											<ul>
-												<li><a class="selected" href="" title="">Residenziale</a></li>
-												<li><a href="" title="">Commerciale</a></li>
-												<li><a href="" title="">Vacanze</a></li>
-											</ul>
+									<!-- sez -->
+									<div class="sez sez2">
+										<div class="couple">
+
+											<div class="select">
+												<p>Categoria</p>
+												<a class="handle" href="" title="">Residenziale</a>
+												<ul>
+													<li><a class="selected" href="" title="">Residenziale</a></li>
+													<li><a href="" title="">Commerciale</a></li>
+													<li><a href="" title="">Vacanze</a></li>
+												</ul>
+											</div>
+
+											<div class="select">
+												<p>Categoria</p>
+												<a class="handle" href="" title="">Residenziale</a>
+												<ul>
+													<li><a class="selected" href="" title="">Residenziale</a></li>
+													<li><a href="" title="">Commerciale</a></li>
+													<li><a href="" title="">Vacanze</a></li>
+												</ul>
+											</div>
+
 										</div>
-
-										<div class="select">
-											<p>Categoria</p>
-											<a class="handle" href="" title="">Residenziale</a>
-											<ul>
-												<li><a class="selected" href="" title="">Residenziale</a></li>
-												<li><a href="" title="">Commerciale</a></li>
-												<li><a href="" title="">Vacanze</a></li>
-											</ul>
-										</div>
-
-									</div>									
-								</div>
-
-								<!-- sez -->
-								<div class="sez">
-									<div class="triplet sez5">
-
-										<div class="select">
-											<p>Categoria</p>
-											<a class="handle" href="" title="">Scegli</a>
-											<ul>
-												<li><a class="selected" href="" title="">Residenziale</a></li>
-												<li><a href="" title="">Commerciale</a></li>
-												<li><a href="" title="">Vacanze</a></li>
-											</ul>
-										</div>
-
-										<div class="select">
-											<p>Categoria</p>
-											<a class="handle" href="" title="">Scegli</a>
-											<ul>
-												<li><a class="selected" href="" title="">Residenziale</a></li>
-												<li><a href="" title="">Commerciale</a></li>
-												<li><a href="" title="">Vacanze</a></li>
-											</ul>
-										</div>
-
-										<div class="select">
-											<p>Categoria</p>
-											<a class="handle" href="" title="">Scegli</a>
-											<ul>
-												<li><a class="selected" href="" title="">Residenziale</a></li>
-												<li><a href="" title="">Commerciale</a></li>
-												<li><a href="" title="">Vacanze</a></li>
-											</ul>
-										</div>
-
 									</div>
-									<div class="couple sez6">
 
-										<div class="select">
-											<p>Categoria</p>
-											<a class="handle" href="" title="">Residenziale</a>
-											<ul>
-												<li><a class="selected" href="" title="">Residenziale</a></li>
-												<li><a href="" title="">Commerciale</a></li>
-												<li><a href="" title="">Vacanze</a></li>
-											</ul>
+									<!-- sez -->
+									<div class="sez">
+										<div class="couple sez3">
+
+											<div class="select">
+												<p>Categoria</p>
+												<a class="handle" href="" title="">Residenziale</a>
+												<ul>
+													<li><a class="selected" href="" title="">Residenziale</a></li>
+													<li><a href="" title="">Commerciale</a></li>
+													<li><a href="" title="">Vacanze</a></li>
+												</ul>
+											</div>
+
+											<div class="select">
+												<p>Categoria</p>
+												<a class="handle" href="" title="">Residenziale</a>
+												<ul>
+													<li><a class="selected" href="" title="">Residenziale</a></li>
+													<li><a href="" title="">Commerciale</a></li>
+													<li><a href="" title="">Vacanze</a></li>
+												</ul>
+											</div>
+
 										</div>
+										<div class="couple sez4">
 
-										<div class="select">
-											<p>Categoria</p>
-											<a class="handle" href="" title="">Residenziale</a>
-											<ul>
-												<li><a class="selected" href="" title="">Residenziale</a></li>
-												<li><a href="" title="">Commerciale</a></li>
-												<li><a href="" title="">Vacanze</a></li>
-											</ul>
-										</div>
+											<div class="select">
+												<p>Categoria</p>
+												<a class="handle" href="" title="">Residenziale</a>
+												<ul>
+													<li><a class="selected" href="" title="">Residenziale</a></li>
+													<li><a href="" title="">Commerciale</a></li>
+													<li><a href="" title="">Vacanze</a></li>
+												</ul>
+											</div>
 
-									</div>									
-								</div>
+											<div class="select">
+												<p>Categoria</p>
+												<a class="handle" href="" title="">Residenziale</a>
+												<ul>
+													<li><a class="selected" href="" title="">Residenziale</a></li>
+													<li><a href="" title="">Commerciale</a></li>
+													<li><a href="" title="">Vacanze</a></li>
+												</ul>
+											</div>
 
-								<!-- sez -->
-								<div class="sez">
-									<div class="oddcouple sez7">
-
-										<div class="select">
-											<p>Categoria</p>
-											<a class="handle" href="" title="">Residenziale</a>
-											<ul>
-												<li><a class="selected" href="" title="">Residenziale</a></li>
-												<li><a href="" title="">Commerciale</a></li>
-												<li><a href="" title="">Vacanze</a></li>
-											</ul>
-										</div>
-
-										<div class="checkbox">
-											<div class="check"></div>
-											Solo annunci con foto
-										</div>
-
+										</div>									
 									</div>
-									<div class="triplet sez8">
-										<div class="checkbox">
-											<div class="check"></div>
-											Checkbox
+
+									<!-- sez -->
+									<div class="sez">
+										<div class="triplet sez5">
+
+											<div class="select">
+												<p>Categoria</p>
+												<a class="handle" href="" title="">Scegli</a>
+												<ul>
+													<li><a class="selected" href="" title="">Residenziale</a></li>
+													<li><a href="" title="">Commerciale</a></li>
+													<li><a href="" title="">Vacanze</a></li>
+												</ul>
+											</div>
+
+											<div class="select">
+												<p>Categoria</p>
+												<a class="handle" href="" title="">Scegli</a>
+												<ul>
+													<li><a class="selected" href="" title="">Residenziale</a></li>
+													<li><a href="" title="">Commerciale</a></li>
+													<li><a href="" title="">Vacanze</a></li>
+												</ul>
+											</div>
+
+											<div class="select">
+												<p>Categoria</p>
+												<a class="handle" href="" title="">Scegli</a>
+												<ul>
+													<li><a class="selected" href="" title="">Residenziale</a></li>
+													<li><a href="" title="">Commerciale</a></li>
+													<li><a href="" title="">Vacanze</a></li>
+												</ul>
+											</div>
+
 										</div>
-										<div class="checkbox">
-											<div class="check"></div>
-											Checkbox
+										<div class="couple sez6">
+
+											<div class="select">
+												<p>Categoria</p>
+												<a class="handle" href="" title="">Residenziale</a>
+												<ul>
+													<li><a class="selected" href="" title="">Residenziale</a></li>
+													<li><a href="" title="">Commerciale</a></li>
+													<li><a href="" title="">Vacanze</a></li>
+												</ul>
+											</div>
+
+											<div class="select">
+												<p>Categoria</p>
+												<a class="handle" href="" title="">Residenziale</a>
+												<ul>
+													<li><a class="selected" href="" title="">Residenziale</a></li>
+													<li><a href="" title="">Commerciale</a></li>
+													<li><a href="" title="">Vacanze</a></li>
+												</ul>
+											</div>
+
+										</div>									
+									</div>
+
+									<!-- sez -->
+									<div class="sez">
+										<div class="oddcouple sez7">
+
+											<div class="select">
+												<p>Categoria</p>
+												<a class="handle" href="" title="">Residenziale</a>
+												<ul>
+													<li><a class="selected" href="" title="">Residenziale</a></li>
+													<li><a href="" title="">Commerciale</a></li>
+													<li><a href="" title="">Vacanze</a></li>
+												</ul>
+											</div>
+
+											<div class="checkbox">
+												<div class="check"></div>
+												Solo annunci con foto
+											</div>
+
 										</div>
-										<div class="checkbox">
-											<div class="check checked"></div>
-											Checkbox
-										</div>																				
+										<div class="triplet sez8">
+											<div class="checkbox">
+												<div class="check"></div>
+												Checkbox
+											</div>
+											<div class="checkbox">
+												<div class="check"></div>
+												Checkbox
+											</div>
+											<div class="checkbox">
+												<div class="check checked"></div>
+												Checkbox
+											</div>																				
+										</div>
 									</div>
 								</div>
 

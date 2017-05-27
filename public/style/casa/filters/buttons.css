@@ -1,0 +1,101 @@
+/*
+  text dark grey: 333f48;
+  text light grey: #6a7785;
+  
+  text footer grey: #9b9b9b;
+
+  red: #e4002b;
+  darker red: #a30000;
+
+  border standard: #e3e3e3;
+*/
+
+.buttons p{
+  float:left;
+  padding-bottom:.3rem;
+  width:100%;
+  font:1.2rem/2rem 'Museo-Sans-300'; color:#333f48; text-transform:uppercase;
+}
+
+.buttons ul{
+  float:left;
+  width:100%;
+  font:1.3rem/3.5rem 'Museo-Sans-300';
+}
+
+.buttons li{
+  float:left;
+  width:33%;
+  border:1px solid #697684; border-right:0 none;
+}
+
+.buttons .small li{
+  float:left;
+  width:auto;
+  border:1px solid #697684; border-right:0 none;
+}
+
+.buttons li:first-of-type{
+  border-radius:2px 0 0 2px;
+}
+
+.buttons li.mid{
+  width:34%;
+}
+
+.buttons .small li.mid{
+  width:auto;
+}
+
+.buttons li:last-of-type{
+  border-right:1px solid #697684;
+  border-radius:0 2px 2px 0;
+}
+
+.buttons a{
+  display:block;
+  height:100%;
+  color:#333f48; text-align:center; text-decoration:none;
+}
+
+.buttons .small a{
+  padding:0 .6rem;
+}
+
+.buttons a.selected{
+  color:#FFF;
+  background:#697684;
+}
+
+.buttons ul.multiple{
+  margin-top:0;
+  max-height:0;
+  border-top:0 none;
+  overflow:hidden;
+  transition:all .3s linear;
+}
+
+.buttons ul.multiple.active{
+  margin-top:1rem;
+  max-height:100rem;
+  border-top:solid 1px #e3e3e3;
+}
+
+.buttons ul.multiple li{
+  display: flex;
+  flex-flow: row;
+  width:100%;
+  border:0 none;
+}
+
+.buttons ul.multiple li a{
+  display: flex; flex-grow: 1; justify-content: center; align-items: center;
+  margin-top:1rem;
+  height:3.5rem;
+  font: 12px 'Museo-Sans-300'; color: #697684; text-align: center;
+  border: 1px solid #697684; border-radius: 3px;
+}
+
+.buttons ul.multiple li a.roundbutton:nth-of-type(2){
+  margin:1rem .5rem 0;
+}

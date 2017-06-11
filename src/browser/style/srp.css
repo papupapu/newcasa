@@ -170,6 +170,10 @@ article .bookmark{
   margin-top:.1rem;
 }
 
+article .bookmark a{
+  display:block;
+}
+
 /*
   PAGINATION
 */

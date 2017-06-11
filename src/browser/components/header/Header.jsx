@@ -6,7 +6,7 @@ import './Header.css';
 import Hamburger from '../common/icons/Hamburger';
 import Avatar from '../common/icons/Avatar';
 
-const Header = ({ channel, isHome, pageTitle, navLinksData }) => {
+const Header = ({ channel, isHome, pageTitle, navLinksData, openModal, toggleSiteNavigation }) => {
   const logo = isHome ? (
     <h1 className="logo">
       <a href="/" title={pageTitle}>{pageTitle}</a>
@@ -52,7 +52,12 @@ const Header = ({ channel, isHome, pageTitle, navLinksData }) => {
         <menu id="sitemenu">
           <ul>
             <li>
-              <a className="menu" href="" title="Menu">
+              <a
+                className="menu_handle"
+                href=""
+                title="Menu"
+                onClick={(evt) => { evt.preventDefault(); toggleSiteNavigation(evt); }}
+              >
                 {Hamburger()}
               </a>
             </li>
@@ -65,8 +70,14 @@ const Header = ({ channel, isHome, pageTitle, navLinksData }) => {
                 Area riservata
               </a>
             </li>
-            <li>
-              <a className="mycasa" href="" title="Accedi a MyCasa">
+            <li className="mycasa">
+              <a
+                className="modal_handle"
+                href=""
+                title="Accedi a MyCasa"
+                data-action="login"
+                onClick={(evt) => { evt.preventDefault(); openModal(evt, { title: 'titolo', subtitle: 'sottotitolo' }); }}
+              >
                 {Avatar({ isAuthenticated: false })}
               </a>
             </li>
@@ -83,6 +94,8 @@ Header.propTypes = {
   isHome: PropTypes.bool,
   pageTitle: PropTypes.string,
   navLinksData: PropTypes.instanceOf(Object),
+  openModal: PropTypes.func,
+  toggleSiteNavigation: PropTypes.func,
 };
 
 Header.defaultProps = {
@@ -90,6 +103,8 @@ Header.defaultProps = {
   isHome: false,
   pageTitle: 'Case e appartamenti in vendita – Annunci immobiliari - Casa.it',
   navLinksData: {},
+  openModal: () => {},
+  toggleSiteNavigation: () => {},
 };
 
 export default Header;

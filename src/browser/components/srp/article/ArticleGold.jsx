@@ -4,19 +4,19 @@ import PropTypes from 'prop-types';
 import StarIcon from '../../common/icons/StarIcon';
 
 const Article = ({ openModal }) => (
-  <article className="standard" itemProp="itemListElement" itemScope itemType="http://schema.org/ListItem">
-    <meta itemProp="position" content="4" />
-    <link itemProp="url" href="/immobile-appartamento-lombardia-milano-31760864" />
+  <article className="gold" itemProp="itemListElement" itemScope itemType="http://schema.org/ListItem">
+    <meta itemProp="position" content="2" />
+    <link itemProp="url" href="/immobile-villetta%20a%20schiera-veneto-este-31911976/" />
     <div itemScope itemType="http://schema.org/SingleFamilyResidence">
       <h1 itemProp="address" itemScope="" itemType="http://schema.org/PostalAddress">
-        <a href="/immobile-appartamento-lombardia-milano-31760864">
-          <span itemProp="streetAddress">Via Pico della mirandola</span>, <span itemProp="addressLocality">Milano (MI)</span>
+        <a href="/immobile-villetta%20a%20schiera-veneto-este-31911976/">
+          <span itemProp="streetAddress">VIA CASELLA 14</span>, <span itemProp="addressLocality">Milano (MI)</span>
           <meta itemProp="addressRegion" content="Lombardia" />
         </a>
       </h1>
       <p itemProp="name" className="propertyType">
         <span>Certosa/ Quarto Oggiaro/ Villa Pizzone</span>
-        Appartamento
+        Nuova costruzione
       </p>
       <ul className="infos">
         <li className="price">&euro; 10.000.000</li>
@@ -25,11 +25,12 @@ const Article = ({ openModal }) => (
         <li className="mq">1.000 <span>mq</span></li>
       </ul>
       <p itemProp="description" className="desc">
-        Adiacenze P.zza Accursio in via tranquilla proponiamo appartamento di 135 mq, piano alto, tripla esposizione....
+        Trilocale (4° piano)-Il progetto edilizio prevede la realizzazione di un edificio di 5 piani fuori terra...
       </p>
       <figure>
-        <a itemProp="url" href="/immobile-appartamento-lombardia-milano-31760864">
-          <img itemProp="photo" src="http://images-1.casa.it/360x265/listing/cc38627c02cd5ff2cb4b050eae01642d" alt="" />
+        <a itemProp="url" href="/immobile-villetta%20a%20schiera-veneto-este-31911976/">
+          <img itemProp="photo" src="http://images-1.casa.it/360x265/listing/e89009aab59ef173af63311466e0d8be" alt="" />
+          <span>Gold</span>
         </a>
       </figure>
       <menu>
@@ -44,7 +45,7 @@ const Article = ({ openModal }) => (
               href=""
               data-action="sendMail"
               className="modal_handle"
-              onClick={(evt) => { evt.preventDefault(); openModal(evt, { title: 'Via Pico della mirandola, Milano (MI)', subtitle: 'Appartamento - 10.000.000 euro' }); }}
+              onClick={(evt) => { evt.preventDefault(); openModal(evt, { title: 'VIA CASELLA 14, Milano (MI)', subtitle: 'Nuova costruzione - 10.000.000 euro' }); }}
             >
               {StarIcon()}
             </a>

@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 import './style/srp.css';
 
 import Intro from './components/srp/intro/Intro';
+import ArticlePlatinum from './components/srp/article/ArticlePlatinum';
+import ArticleGold from './components/srp/article/ArticleGold';
+import ArticleSilver from './components/srp/article/ArticleSilver';
 import Article from './components/srp/article/Article';
 import Filters from './components/filters/Filters';
 
@@ -39,6 +42,10 @@ class ListingPage extends React.Component {
     this.updateFilters = this.updateFilters.bind(this);
   }
 
+  shouldComponentUpdate() {
+    return false;
+  }
+
   clearOneFilter(scope) {
     this.filtersComponent.clearOneFilter(scope);
   }
@@ -64,14 +71,15 @@ class ListingPage extends React.Component {
           ref={(introComponent) => { this.introComponent = introComponent; }}
           channel={this.channel}
           filters={this.filters}
+          openModal={this.props.openModal}
           clearOneFilter={this.clearOneFilter}
           clearAllFilters={this.clearAllFilters}
         />
         <div className="sw">
-          {Article()}
-          {Article()}
-          {Article()}
-          {Article()}
+          {ArticlePlatinum({ openModal: this.props.openModal })}
+          {ArticleGold({ openModal: this.props.openModal })}
+          {ArticleSilver({ openModal: this.props.openModal })}
+          {Article({ openModal: this.props.openModal })}
           <aside>
             <Filters
               ref={(filtersComponent) => { this.filtersComponent = filtersComponent; }}
@@ -89,11 +97,13 @@ class ListingPage extends React.Component {
 ListingPage.propTypes = {
   channel: PropTypes.string,
   updateSearchUrl: PropTypes.func,
+  openModal: PropTypes.func,
 };
 
 ListingPage.defaultProps = {
   channel: 'vendita',
   updateSearchUrl: () => {},
+  openModal: () => {},
 };
 
 export default ListingPage;

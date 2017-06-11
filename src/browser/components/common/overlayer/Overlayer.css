@@ -13,14 +13,16 @@
 	transform: translate(0,0);
 }
 
-.menu_open .overlayer{
+.menu_open .overlayer,
+.modal_open .overlayer{
 	opacity:.3;
 	transform: translate(0,0);
 }
 
 @media screen and (min-width: 768px) { /* tablet */
 
-	.menu_open .overlayer{
+	.menu_open .overlayer,
+	.modal_open .overlayer{
 		opacity:.5;
 		transform: translate(0,0);
 	}

@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { computeActiveFilters } from '../../../helpers/filters/Filters';
-import { testOverlayer } from '../../../helpers/DOMHelpers';
 
 import Breadcrumb from './breadcrumb/Breadcrumb';
 import FiltersMenu from './filtersmenu/FiltersMenu';
@@ -84,12 +83,24 @@ class Intro extends React.Component {
           />
 
           <div className="srp-user-actions">
-            <a className="bookmark" href="" onClick={e => testOverlayer(e)}>
-              {StarIcon()}
-            </a>
-            <a className="genericlead" href="" onClick={e => testOverlayer(e)}>
-              {StarIcon()}
-            </a>
+            <div className="bookmark">
+              <a
+                className="modal_handle"
+                href=""
+                onClick={(e) => { e.preventDefault(); this.props.openModal(e); }}
+              >
+                {StarIcon()}
+              </a>
+            </div>
+            <div className="genericlead">
+              <a
+                className="modal_handle"
+                href=""
+                onClick={(e) => { e.preventDefault(); this.props.openModal(e); }}
+              >
+                {StarIcon()}
+              </a>
+            </div>
           </div>
 
           <div className="list-view-options">
@@ -111,6 +122,7 @@ Intro.propTypes = {
   filters: PropTypes.instanceOf(Object),
   clearOneFilter: PropTypes.func,
   clearAllFilters: PropTypes.func,
+  openModal: PropTypes.func,
 };
 
 Intro.defaultProps = {
@@ -118,6 +130,7 @@ Intro.defaultProps = {
   filters: {},
   clearOneFilter: () => {},
   clearAllFilters: () => {},
+  openModal: () => {},
 };
 
 export default Intro;

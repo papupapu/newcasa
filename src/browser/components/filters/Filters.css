@@ -16,8 +16,7 @@
   padding-bottom:9.4rem;
   width:100vw; height:100vh;
   background:#FFF; border-top:solid 3px #e3e3e3;
-  /*transform:translate(100%, 0);*/
-  transform:translate(0, 9.4rem);
+  transform:translate(100%, 9.4rem);
   overflow-y:auto;
 }
 
@@ -43,6 +42,7 @@
     top:auto; right:auto;
     padding-bottom:.8rem;
     width:30rem; height:auto;
+    border-top-width:1px;
     overflow:hidden;
     transform:translate(0, 0);
   }

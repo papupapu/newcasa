@@ -4,13 +4,14 @@ import PropTypes from 'prop-types';
 import StarIcon from '../../common/icons/StarIcon';
 
 const Article = ({ openModal }) => (
-  <article className="standard" itemProp="itemListElement" itemScope itemType="http://schema.org/ListItem">
-    <meta itemProp="position" content="4" />
-    <link itemProp="url" href="/immobile-appartamento-lombardia-milano-31760864" />
+  <article className="silver" itemProp="itemListElement" itemScope itemType="http://schema.org/ListItem">
+    <meta itemProp="position" content="3" />
+    <link itemProp="url" href="/immobile-appartamento-lombardia-milano-33017883" />
     <div itemScope itemType="http://schema.org/SingleFamilyResidence">
       <h1 itemProp="address" itemScope="" itemType="http://schema.org/PostalAddress">
-        <a href="/immobile-appartamento-lombardia-milano-31760864">
-          <span itemProp="streetAddress">Via Pico della mirandola</span>, <span itemProp="addressLocality">Milano (MI)</span>
+        <a href="/immobile-appartamento-lombardia-milano-33017883">
+          <span itemProp="streetAddress">Via Don Francesco Beniamino della Torre</span>,{' '}
+          <span itemProp="addressLocality">Milano (MI)</span>
           <meta itemProp="addressRegion" content="Lombardia" />
         </a>
       </h1>
@@ -25,11 +26,12 @@ const Article = ({ openModal }) => (
         <li className="mq">1.000 <span>mq</span></li>
       </ul>
       <p itemProp="description" className="desc">
-        Adiacenze P.zza Accursio in via tranquilla proponiamo appartamento di 135 mq, piano alto, tripla esposizione....
+        Euromilano - zona servitissima da mezzi di superficie oltre passante ferroviario che collega direttamente...
       </p>
       <figure>
-        <a itemProp="url" href="/immobile-appartamento-lombardia-milano-31760864">
-          <img itemProp="photo" src="http://images-1.casa.it/360x265/listing/cc38627c02cd5ff2cb4b050eae01642d" alt="" />
+        <a itemProp="url" href="/immobile-appartamento-lombardia-milano-33017883">
+          <img itemProp="photo" src="http://images-1.casa.it/360x265/listing/5baeb5b471c09e2913602c5d0073e95f" alt="" />
+          <span>Silver</span>
         </a>
       </figure>
       <menu>
@@ -44,7 +46,7 @@ const Article = ({ openModal }) => (
               href=""
               data-action="sendMail"
               className="modal_handle"
-              onClick={(evt) => { evt.preventDefault(); openModal(evt, { title: 'Via Pico della mirandola, Milano (MI)', subtitle: 'Appartamento - 10.000.000 euro' }); }}
+              onClick={(evt) => { evt.preventDefault(); openModal(evt, { title: 'Via Don Francesco Beniamino della Torre, Milano (MI)', subtitle: 'Appartamento - 10.000.000 euro' }); }}
             >
               {StarIcon()}
             </a>

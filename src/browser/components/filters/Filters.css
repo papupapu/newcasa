@@ -1,0 +1,144 @@
+/*
+  text dark grey: 333f48;
+  text light grey: #6a7785;
+  
+  text footer grey: #9b9b9b;
+
+  red: #e4002b;
+  darker red: #a30000;
+
+  border standard: #e3e3e3;
+*/
+
+.filters{
+  position:fixed; z-index:21;
+  top:0; right:0;
+  padding-bottom:9.4rem;
+  width:100vw; height:100vh;
+  background:#FFF; border-top:solid 3px #e3e3e3;
+  /*transform:translate(100%, 0);*/
+  transform:translate(0, 9.4rem);
+  overflow-y:auto;
+}
+
+.filters h3{
+  float:left;
+  padding:1rem;
+  width:100%;  
+  background:#f1f1f1;
+}
+
+.filters h4{
+  float:left;
+  padding:3.5rem 1rem 1.5rem;
+  width:100%;  
+  font-size:1.3rem; font-family:'Museo-Sans-300'; color:#333f48; text-align:center; text-transform:uppercase;
+  border-bottom:solid 1px #e3e3e3;
+}
+
+@media screen and (min-width: 950px) { /* Desktop */
+
+  .filters{
+    position:static;
+    top:auto; right:auto;
+    padding-bottom:.8rem;
+    width:30rem; height:auto;
+    overflow:hidden;
+    transform:translate(0, 0);
+  }
+
+  /* title area */
+
+  .filters h3{
+    margin-bottom:2.3rem;
+    text-align:right;
+  }
+
+  .filters h3 strong{
+    float:left;
+    font-weight:700;
+  }
+
+  .filters h3 span{
+    font-size:1.3rem; color:#6a7785;
+  }
+
+  .filters em{
+    font-style:normal;
+  }
+
+  .filters > p{
+    margin-bottom:2.5rem;
+    font-size:1.3rem; color:#333f48;
+  }
+
+  .filters > p > a{
+    float:right;
+    color:#e4002b;
+  }
+
+  .block1{
+    position:relative; z-index:8;
+    margin-bottom:2.5rem;
+  }
+
+  .block2{
+    position:relative; z-index:7;
+    margin-bottom:1.5rem;
+  }
+
+  .block3{
+    position:relative; z-index:6;
+    margin-bottom:2.5rem;
+  }
+
+  .block4{
+    position:relative; z-index:5;
+    margin-bottom:1.5rem;
+  }
+
+  .block5{
+    position:relative; z-index:4;
+    margin-bottom:2.5rem;
+  }
+
+  .block6{
+    position:relative; z-index:3;
+    margin-bottom:0;
+  }
+
+  .block7{
+    position:relative; z-index:2;
+    margin-bottom:1.5rem;
+  }
+
+  .block8{
+    position:relative; z-index:1;
+    padding-top:1.5rem; margin-bottom:0;
+    border-top:solid 1px #cad0d6;
+  }
+
+  .couple,
+  .triplet{
+    display:flex; justify-content:space-between;
+  }
+
+  .couple .select,
+  .couple .checkbox{
+    display:flex; align-self:flex-start;
+    margin-top:1.7rem;
+    width:calc(50% - .75rem);
+  }
+
+  .couple .select:nth-of-type(2){
+    align-self:flex-end;
+  }
+
+  .triplet .select,
+  .triplet .checkbox{
+    display:flex; align-self:flex-start;
+    margin-top:1.7rem;
+    width:calc(33.3% - 1rem);  
+  }
+
+}

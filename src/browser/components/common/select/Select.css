@@ -1,0 +1,135 @@
+/*
+  text dark grey: 333f48;
+  text light grey: #6a7785;
+  
+  text footer grey: #9b9b9b;
+
+  red: #e4002b;
+  darker red: #a30000;
+
+  border standard: #e3e3e3;
+*/
+
+.select{
+  position:relative;
+  margin-top:3.4rem;
+  border:solid 1px #cad0d6; border-radius:2px;
+}
+
+.select.open{
+  border-radius:2px 2px 0 0;
+}
+
+.select p{
+  position:absolute;
+  top:-1.7rem; left:.1rem;
+  font-size:1.2rem; color:#6a7785;
+}
+
+.select p a{
+  color:#6a7785; text-decoration:none;
+  cursor:default;
+}
+
+.select a.handle{
+  display:block;
+  padding:0 2rem 0 1rem;
+  width:100%;
+  font:1.3rem/3.5rem 'Museo-Sans-500'; color:#333f48; text-decoration:none;
+}
+
+.select a.handle:after{
+  content: "";
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: #000 transparent transparent;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #000;
+}
+
+.select.open a.handle:after{
+  content: "";
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: #000 transparent transparent;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #000;
+  border-top:0 none;
+}  
+
+.select ul{
+  position:absolute;
+  top:100%; left:-.1rem;
+  height:0;
+  overflow:hidden;  
+}
+
+.select.open ul{
+  width:calc(100% + .2rem); height:auto; max-height:21rem;
+  background:#FFF; border:solid 1px #cad0d6; border-top:0 none; border-radius:0 0 2px 2px;
+  overflow-y:auto;
+}
+
+.select ul a{
+  display:block;
+  margin:0 .5rem; padding:0 .5rem;
+  font:1.3rem/3.5rem 'Museo-Sans-300'; color:#333f48; text-decoration:none;  
+}
+
+.select ul a:hover{
+  color: #296dd3;
+  background:#dfecf8; border-radius:2px;
+}
+
+.select ul a.selected{
+  position:relative;
+  color: #296dd3;
+  background:rgba(223,236,248,.5); border-radius:2px;
+}
+
+.select ul a.selected:after {
+  content: "";
+  position: absolute;
+  right: 1.5rem;
+  top: 25%;
+  width: 5px; height: 11px;
+  border-bottom: 1px solid #296dd3;
+  border-right: 1px solid #296dd3;
+  transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.select a.confirm{
+  display:none;
+  position:absolute;
+  left:-.1rem;
+  margin:0; padding:0;
+  width:calc(100% + .2rem);
+  font:700 1.3rem/3.5rem 'Museo-Sans-300'; color:#FFF; text-decoration:none; text-align:center;
+  background:#cad0d6; border-radius:0 0 2px 2px;
+}
+
+.select.open a.confirm{
+  display:inline-block;
+}
+
+.select ul a.confirm:hover{
+  color:#333f48;
+  background:#e3e3e3;
+}
+
+.select a:first-letter{
+  text-transform:uppercase;
+}

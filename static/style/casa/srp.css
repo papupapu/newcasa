@@ -1,0 +1,633 @@
+/*
+  text dark grey: 333f48;
+  text light grey: #6a7785;
+  
+  text footer grey: #9b9b9b;
+
+  red: #e4002b;
+  darker red: #a30000;
+
+  border standard: #e3e3e3;
+*/
+
+/*
+  PAGE FORMATTING
+*/
+
+.srp section > .sw {
+  padding:0 .5rem 5rem;
+}
+
+/*
+  ARTICLE
+*/
+
+article{
+  position:relative;
+  margin:.5rem 0 0; padding:1rem 1rem .8rem;
+  background:#FFF; border:1px solid #e3e3e3;  
+}
+
+/* flex - easy elements order config */
+
+article > div{
+  display:flex;
+  flex-direction:column;  
+}
+
+article figure{
+  order:1;
+}
+
+article ul.infos{
+  order:2;
+}
+
+article h1{
+  order:3;
+}
+
+article p.propertyType{
+  order:4;
+}
+
+article p.desc{
+  order:5;
+}
+
+article menu{
+  order:6;
+}
+
+/*
+  Article elements formatting
+*/
+
+article h1{
+  margin:-.1rem 0 .2rem;
+  font-weight:700; font-size:1.5rem; line-height:2.3rem; color:#333f48;
+}
+
+article h1 a{
+  color:#333f48; text-decoration:none;
+}
+
+article p{
+  margin-top:.3rem;
+  font-size:1.3rem; line-height:2rem; color:#333f48;
+}
+
+article p.desc{
+  display:none;
+}
+
+article p span{
+  display: block; color:#6a7785;
+}
+
+article ul.infos{
+  margin:.5rem 0 0;
+  line-height:3rem;
+}
+
+article ul.infos li{
+  float:right;
+  margin-left:.5rem;
+  font-weight:700; font-size:1.6rem; color:#333f48;
+}
+
+article ul.infos li:first-of-type{
+  float:left;
+  margin-left:0;
+  font-weight:700; font-size:1.8rem; color:#333f48;
+}
+
+article ul.infos li span{
+  font-weight:400; font-size:1.1rem; color:#6a7785;
+}
+
+/* 
+  Article image height scaled according to ad type
+*/
+
+article figure{
+  display:block;
+  margin:-1rem 0 0 -1rem;
+  width:calc(100% + 2rem); height:calc( (100vw / 320) * 180);
+  overflow:hidden;
+}
+
+article.platinum figure,
+article.platinum figure img{
+  height:calc( (100vw / 320) * 235);
+}
+
+article.gold figure,
+article.gold figure img{
+  height:calc( (100vw / 320) * 225);
+}
+
+article figure a{
+  display:block;
+  width:100%; height:100%;
+}
+
+article figure img{
+    width:100%;
+}
+
+article figure span{
+  position:absolute;
+  top:0; left:0;
+  padding:0 .5rem;
+  font-weight:700; font-size:.8rem; line-height:2rem; color:#FFF; text-decoration:none; text-transform:uppercase;
+  background:#697684;
+}
+
+/*
+  Agency infos + Actions
+*/
+
+article menu{
+  margin:1rem 0 0 -1rem; padding:1rem 1rem 0;
+  width:calc(100% + 2rem);
+  background:#FFF; border-top:1px solid #e3e3e3;
+  overflow:hidden;
+}
+
+article .agency{
+  float:left;
+}
+
+article .agency img{
+  display:block;
+  max-width:120px;
+  border:1px solid #f1f1f1;
+}
+
+article .bookmark{
+  float:right;
+  margin-top:.1rem;
+}
+
+/*
+  PAGINATION
+*/
+
+.pagination{
+  margin:2.5rem 0 0;
+  width:100%;
+}
+
+.pagination ul{
+  display:none;
+}
+
+/*
+  SIDEBAR
+*/
+
+aside > div{
+  width:0; height:0;
+  overflow:hidden;
+}
+
+@media screen and (min-width: 736px) { /* Tablet */
+
+  /*
+    PAGE FORMATTING
+  */
+
+  .srp section > .sw {
+    padding:0 2rem 5rem;
+  }
+
+  /*
+    ARTICLE
+    Article height scaled according to ad type
+  */
+
+  article{
+    margin:2rem 0 0; padding:1.5rem 1.5rem 1.5rem 25.7rem;
+    height:18rem;
+  }
+
+  article.silver{
+    padding-left:31.8rem;
+    height:22.5rem;
+  }
+  
+  article.platinum,
+  article.gold{
+    padding-left:37.2rem;
+    height:26.5rem;
+  }  
+
+  /* flex - easy elements order config */
+
+  article h1{
+    order:1;
+  }
+
+  article p.propertyType{
+    order:2;
+  }
+
+  article ul.infos{
+    order:3;
+  }
+
+  article p.desc{
+    order:4;
+  }  
+
+  article figure{
+    order:5;
+  }  
+
+  /*
+    Article elements formatting
+  */  
+
+  article h1{
+    margin:0;
+    font-size:1.6rem; line-height:2.4rem;
+  }  
+
+  article ul.infos{
+    margin-top:1rem;
+  }
+
+  article ul.infos li:first-of-type{
+    font-size:2rem;
+  }  
+
+  article p.desc{
+    display:block;
+    margin-top:1rem;
+  }   
+
+  article.standard p.desc{
+    display:none;
+  }     
+
+  /*
+    completely change image styling
+  */
+
+  article figure,
+  article.platinum figure,
+  article.gold figure{
+    position:absolute;
+    top:0; left:0;
+    margin:0;
+    width:auto; height:100%;
+  }
+
+  article figure img{
+    width:auto; max-height:100%;
+  }
+
+  /*
+    Agency infos + Actions
+  */
+
+  article menu{
+    position:absolute;
+    bottom:1rem; right:0;
+    padding-right:1.5rem; padding-left:1.5rem;
+    width:calc(100% - 24.2rem);
+  }  
+
+  article.silver p.desc{
+    display:none;
+  }
+
+  article.silver menu{
+    width:calc(100% - 30.3rem);
+  }
+  
+  article.platinum menu,
+  article.gold menu{
+    width:calc(100% - 35.7rem);
+  }    
+
+}
+
+@media screen and (min-width: 768px) { /* Tablet */
+
+  article.silver p.desc{
+    margin-top:0;
+    display:block;
+  }
+
+}
+
+@media screen and (min-width: 950px) { /* Desktop */
+
+  /*
+    PAGE FORMATTING
+  */
+
+  .srp section > .sw {
+    position:relative;
+    padding:0 1rem 5rem;
+  }
+
+  /*
+    ARTICLE
+  */  
+
+  article{
+    margin:1rem 0 0; padding:.5rem 1rem .5rem 22.5rem;
+    width:calc(100% - 31rem); height:16rem;
+  }
+
+  article.silver{
+    padding-left:26rem;
+    height:18.6rem;
+  }
+  
+  article.platinum,
+  article.gold{
+    padding-left:30.4rem;
+    height:21.9rem;
+  }
+
+  article ul.infos{
+    margin-top:.5rem;
+  }  
+
+  article ul.infos li{
+    float:right;
+    margin-left:.5rem;
+    font-weight:700; font-size:1.6rem; color:#333f48;
+  }
+
+  article ul.infos li:first-of-type{
+    float:left;
+    margin-left:0;
+    font-weight:700; font-size:1.8rem; color:#333f48;
+  }
+
+  article ul.infos li span{
+    font-weight:400; font-size:1.1rem; color:#6a7785;
+  }  
+
+  article p.desc{
+    margin-top:0;
+  }
+
+  article.silver p.desc{
+    display:none;
+  }
+
+  article menu{
+    bottom:.2rem;
+    padding-top:.5rem; padding-right:.5rem; padding-left:1rem;
+    width:calc(100% - 21.5rem);    
+  }
+
+  article.silver menu{
+    width:calc(100% - 25rem);
+  }
+  
+  article.platinum menu,
+  article.gold menu{
+    width:calc(100% - 29.5rem);
+  } 
+
+  /*
+    PAGINATOR
+  */
+
+  .pagination{
+    margin:2.5rem 0 0;
+    width:calc(100% - 31rem);
+  }
+
+  .pagination ul{
+    display:block;
+    margin:0 auto;
+    width:42rem;
+    overflow:hidden;
+  }  
+
+  .pagination li{
+    float:left;
+    margin:0 .5rem;
+    font-weight:700; font-size:1.4rem; line-height:3rem; text-align:center;    
+  }  
+
+  .pagination li a{
+    display:block;
+    width:3rem; height:3rem;
+    color:#6a7785; text-decoration:none;
+    background:#FFF; border:1px solid #FFF;
+  }
+
+  .pagination li a:hover{
+    color:#333f48;
+    border:1px solid #e3e3e3;
+  }
+
+  .pagination li a.prev,
+  .pagination li a.next{
+    width:6rem;
+  }  
+
+  .pagination li a.current{
+    color:#FFF;
+    background:#e4002b;
+  }
+
+  /*
+    SIDEBAR
+  */
+
+  aside{
+    position:absolute;
+    top:-5.5rem; right:1rem;
+    width:30rem;    
+  }
+
+  aside > div{
+    margin-bottom:1rem; padding:1.5rem;
+    width:calc(100% - .2rem); height:auto;
+    background:#FFF; border:1px solid #e3e3e3;
+    overflow:visible;
+  }
+
+  aside h3{
+    margin-bottom:.5rem;
+    font-size:1.6rem; font-family:'Museo-Sans-500'; color:#333f48;
+  }
+
+  aside ul{
+    font-size:1.4rem; line-height:1.8rem;
+  }
+
+  aside li{
+    padding:.5rem 0 0;
+  }
+
+  aside ul a{
+    display:block;
+    color:#6a7785; text-decoration:none;
+  }  
+
+  aside ul a:hover{
+    color:#333f48;
+  }
+
+  /*
+    Adv skin needs some adjustements
+  */
+
+  .hasSkin .srp section > .sw{
+    padding:0 1rem;
+    width:96rem;
+    background:#f1f1f1;
+  }   
+
+  .hasSkin article{
+    padding:.5rem .5rem .5rem 22.5rem;
+    width:calc(100% - 31rem); height:16rem;
+  }  
+
+  .hasSkin article.silver{
+    padding-left:26rem;
+    height:18.6rem;
+  }
+  
+  .hasSkin article.platinum,
+  .hasSkin article.gold{
+    padding-left:30.4rem;
+    height:21.9rem;
+  } 
+
+  .hasSkin article ul.infos {
+    margin-top:.5rem;
+  }
+
+  .hasSkin article p.desc {
+    margin-top:0;
+  }     
+
+  .hasSkin article menu{
+    bottom:.2rem;
+    padding-top:.5rem;padding-right:.5rem; padding-left:1rem;
+    width:calc(100% - 21.5rem);    
+  }
+
+  .hasSkin article.silver menu{
+    width:calc(100% - 25rem);
+  }
+  
+  .hasSkin article.platinum menu,
+  .hasSkin article.gold menu{
+    width:calc(100% - 29.5rem);
+  }   
+
+  .hasSkin aside{
+    right:1rem;
+  }  
+
+}
+
+@media screen and (min-width: 1050px) { /* Desktop */
+
+  .srp section > .sw{
+    padding:0 2.5rem 5rem;
+  }   
+
+  article{
+    margin:1.5rem 0 0; padding:1.5rem 1.5rem 1.5rem 25.7rem;
+    width:calc(100% - 31.5rem); height:18rem;
+  }  
+
+  article.silver{
+    padding-left:31.8rem;
+    height:22.5rem;
+  }
+  
+  article.platinum,
+  article.gold{
+    padding-left:37.2rem;
+    height:26.5rem;
+  }    
+
+  article p.desc,
+  article ul.infos{
+    margin-top: 1rem;
+  }  
+
+  article.silver p.desc{
+    display:block;
+  }    
+
+  article ul.infos li{
+    margin-left:.5rem;
+    font-size:1.6rem;
+  }
+
+  article ul.infos li:first-of-type{
+    font-size:1.8rem;
+  }
+
+  article ul.infos li span{
+    font-size:1.1rem;
+  } 
+
+  /*
+    Agency infos + Actions
+  */
+
+  article menu{
+    bottom:.8rem;
+    padding-top:1rem; padding-right:1.5rem; padding-left:1.5rem;
+    width:calc(100% - 24.2rem);
+  }  
+
+  article.silver p.desc{
+    display:none;
+  }
+
+  article.silver menu{
+    width:calc(100% - 30.3rem);
+  }
+  
+  article.platinum menu,
+  article.gold menu{
+    width:calc(100% - 35.7rem);
+  }  
+
+  aside{
+    right:2.5rem;
+  }  
+
+}
+
+@media screen and (min-width: 1300px) { /* Desktop */
+
+  /*
+    PAGE FORMATTING
+  */
+
+  .srp section > .sw {
+    padding:0 0 5rem;
+  }
+
+  /*
+    SIDEBAR
+  */  
+
+  aside{
+    right:0;
+  }  
+
+  aside > div{
+    margin-bottom:1.5rem;
+  }
+
+}

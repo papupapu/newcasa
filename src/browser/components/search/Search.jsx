@@ -7,6 +7,8 @@ class Search extends React.Component {
 
   constructor(props) {
     super(props);
+    this.action = '/';
+    this.submit = this.submit.bind(this);
   }
 
   shouldComponentUpdate() {
@@ -14,7 +16,12 @@ class Search extends React.Component {
   }
 
   updateSearchUrl(searchUrl) {
+    this.action = `http://www.casa.it/${searchUrl}`;
     this.formElement.setAttribute('action', `http://www.casa.it/${searchUrl}`);
+  }
+
+  submit() {
+    document.location = this.action;
   }
 
   render() {
@@ -23,6 +30,7 @@ class Search extends React.Component {
         <form
           ref={(formElement) => { this.formElement = formElement; }}
           action="/"
+          onSubmit={(e) => { e.preventDefault(); this.submit(); }}
         >
           <div className="qscontainer">
             <input
@@ -35,7 +43,11 @@ class Search extends React.Component {
             <div className="suggestions" />
           </div>
           <div className="searchsubmitCont">
-            <input id="searchsubmit" type="submit" value="Cerca" />
+            <input
+              id="searchsubmit"
+              type="submit"
+              value="Cerca"
+            />
           </div>
         </form>
       </div>

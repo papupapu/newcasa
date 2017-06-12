@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 import './Header.css';
 
-import Hamburger from '../common/icons/Hamburger';
-import Avatar from '../common/icons/Avatar';
+import Hamburger from '../icons/Hamburger';
+import Avatar from '../icons/Avatar';
 
 const Header = ({ channel, isHome, pageTitle, navLinksData, openModal, toggleSiteNavigation }) => {
   const logo = isHome ? (

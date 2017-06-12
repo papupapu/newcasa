@@ -8,7 +8,7 @@ import ArticlePlatinum from './components/srp/article/ArticlePlatinum';
 import ArticleGold from './components/srp/article/ArticleGold';
 import ArticleSilver from './components/srp/article/ArticleSilver';
 import Article from './components/srp/article/Article';
-import Filters from './components/filters/Filters';
+import Filters from './components/common/filters/Filters';
 
 class ListingPage extends React.Component {
 
@@ -42,7 +42,12 @@ class ListingPage extends React.Component {
     this.updateFilters = this.updateFilters.bind(this);
   }
 
-  shouldComponentUpdate() {
+  shouldComponentUpdate(nextProps) {
+    const device = nextProps.device !== '' && nextProps.device !== this.props.device;
+    const viewport = nextProps.viewport.width !== '' && nextProps.viewport.width !== this.props.viewport.width;
+    if (device || viewport) {
+      return true;
+    }
     return false;
   }
 
@@ -76,10 +81,34 @@ class ListingPage extends React.Component {
           clearAllFilters={this.clearAllFilters}
         />
         <div className="sw">
-          {ArticlePlatinum({ openModal: this.props.openModal })}
-          {ArticleGold({ openModal: this.props.openModal })}
-          {ArticleSilver({ openModal: this.props.openModal })}
-          {Article({ openModal: this.props.openModal })}
+          {
+            ArticlePlatinum({
+              device: this.props.device,
+              viewport: this.props.viewport,
+              openModal: this.props.openModal,
+            })
+          }
+          {
+            ArticleGold({
+              device: this.props.device,
+              viewport: this.props.viewport,
+              openModal: this.props.openModal,
+            })
+          }
+          {
+            ArticleSilver({
+              device: this.props.device,
+              viewport: this.props.viewport,
+              openModal: this.props.openModal,
+            })
+          }
+          {
+            Article({
+              device: this.props.device,
+              viewport: this.props.viewport,
+              openModal: this.props.openModal,
+            })
+          }
           <aside>
             <Filters
               ref={(filtersComponent) => { this.filtersComponent = filtersComponent; }}
@@ -95,12 +124,16 @@ class ListingPage extends React.Component {
 }
 
 ListingPage.propTypes = {
+  device: PropTypes.string,
+  viewport: PropTypes.instanceOf(Object),
   channel: PropTypes.string,
   updateSearchUrl: PropTypes.func,
   openModal: PropTypes.func,
 };
 
 ListingPage.defaultProps = {
+  device: '',
+  viewport: { width: '', height: '' },
   channel: 'vendita',
   updateSearchUrl: () => {},
   openModal: () => {},

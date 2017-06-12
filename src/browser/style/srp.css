@@ -35,7 +35,8 @@ article > div{
   flex-direction:column;  
 }
 
-article figure{
+article figure,
+article .gallery{
   order:1;
 }
 
@@ -110,7 +111,8 @@ article ul.infos li span{
   Article image height scaled according to ad type
 */
 
-article figure{
+article figure,
+article .gallery{
   display:block;
   margin:-1rem 0 0 -1rem;
   width:calc(100% + 2rem); height:calc( (100vw / 320) * 180);
@@ -118,25 +120,32 @@ article figure{
 }
 
 article.platinum figure,
-article.platinum figure img{
+article.platinum figure img,
+article.platinum .gallery,
+article.platinum .gallery img{
   height:calc( (100vw / 320) * 235);
 }
 
 article.gold figure,
-article.gold figure img{
+article.gold figure img,
+article.gold .gallery,
+article.gold .gallery img{
   height:calc( (100vw / 320) * 225);
 }
 
-article figure a{
+article figure a,
+article .gallery a{
   display:block;
   width:100%; height:100%;
 }
 
-article figure img{
+article figure img,
+article .gallery img{
     width:100%;
 }
 
-article figure span{
+article figure span,
+article .gallery span{
   position:absolute;
   top:0; left:0;
   padding:0 .5rem;
@@ -245,7 +254,8 @@ aside > div{
     order:4;
   }  
 
-  article figure{
+  article figure,
+  article .gallery{
     order:5;
   }  
 
@@ -280,15 +290,41 @@ aside > div{
   */
 
   article figure,
-  article.platinum figure,
-  article.gold figure{
+  article .gallery{
     position:absolute;
     top:0; left:0;
     margin:0;
-    width:auto; height:100%;
+    width:calc((360px * 178px) / 265px); height:100%;
   }
 
-  article figure img{
+  article.silver figure,
+  article.silver .gallery{
+    width:calc((360px * 223px) / 265px); height:100%;
+  }  
+
+  article.platinum figure,
+  article.gold figure,
+  article.platinum .gallery,
+  article.gold .gallery{
+    width:calc((360px * 263px) / 265px); height:100%;
+  }
+
+  article .gallery figure,
+  article.silver .gallery figure,
+  article.gold .gallery figure,
+  article.platinum .gallery figure{
+    position:static;
+  }
+
+  
+  article .gallery img,
+  article.silver .gallery img,
+  article.gold .gallery img,
+  article.platinum .gallery img,
+  article figure img,
+  article.silver figure img,
+  article.gold figure img,
+  article.platinum figure img{
     width:auto; max-height:100%;
   }
 
@@ -356,6 +392,13 @@ aside > div{
   article.gold{
     padding-left:30.4rem;
     height:21.9rem;
+  }
+
+  article .gallery figure,
+  article.platinum .gallery figure,
+  article.gold .gallery figure{
+    position:static;
+    display:block;
   }
 
   article ul.infos{

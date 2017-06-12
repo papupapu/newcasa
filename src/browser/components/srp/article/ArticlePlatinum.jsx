@@ -2,8 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import StarIcon from '../../common/icons/StarIcon';
+import Gallery from '../../common/gallery/Gallery';
 
-const Article = ({ openModal }) => (
+import { GALLERY_MEDIA } from '../../../static/Media';
+
+const Article = ({ device, viewport, openModal }) => (
   <article className="platinum" itemProp="itemListElement" itemScope itemType="http://schema.org/ListItem">
     <meta itemProp="position" content="1" />
     <link itemProp="url" href="/immobile-appartamento-veneto-este-33119605/" />
@@ -26,15 +29,23 @@ const Article = ({ openModal }) => (
         <li className="mq">1.000 <span>mq</span></li>
       </ul>
       <p itemProp="description" className="desc">
-        MM Portello/Via Casella in stabile epoca trilocale ultimo piano
-          composto da ingresso, soggiorno con angolo...
+        MM Portello/Via Casella in stabile epoca trilocale ultimo piano composto da ingresso, soggiorno con angolo...
       </p>
+      <Gallery
+        device={device}
+        viewport={viewport}
+        depth="Platinum"
+        media={GALLERY_MEDIA}
+        cssClassName=""
+      />
+      {/*
       <figure>
         <a itemProp="url" href="/immobile-appartamento-veneto-este-33119605/">
           <img itemProp="photo" src="http://images-1.casa.it/360x265/listing/62e3d282ae75cf24efe91c752c42602c" alt="" />
           <span>Platinum</span>
         </a>
       </figure>
+      */}
       <menu>
         <ul>
           <li>
@@ -58,11 +69,16 @@ const Article = ({ openModal }) => (
   </article>
 );
 
+
 Article.propTypes = {
+  device: PropTypes.string,
+  viewport: PropTypes.instanceOf(Object),
   openModal: PropTypes.func,
 };
 
 Article.defaultProps = {
+  device: '',
+  viewport: { width: '', height: '' },
   openModal: () => {},
 };
 

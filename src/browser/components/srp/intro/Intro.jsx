@@ -5,7 +5,7 @@ import { computeActiveFilters } from '../../../helpers/filters/Filters';
 
 import Breadcrumb from './breadcrumb/Breadcrumb';
 import FiltersMenu from './filtersmenu/FiltersMenu';
-import Search from '../../search/Search';
+import Search from '../../common/search/Search';
 import StarIcon from '../../common/icons/StarIcon';
 
 import './Intro.css';

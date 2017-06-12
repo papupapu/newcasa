@@ -15,6 +15,7 @@
 
 body.menu_open,
 body.modal_open{
+	position:fixed;
 	overflow: hidden;
 }
 
@@ -33,3 +34,11 @@ body.modal_open{
 	}
 
 }	
+
+@media screen and (min-width: 950px) { /* Desktop */
+	body.menu_open,
+	body.modal_open{
+		position:relative;
+		overflow: hidden;
+	}
+}

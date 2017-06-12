@@ -13,12 +13,12 @@ import {
   FILTER_GARDEN_VALUES,
   FILTER_HEATING_VALUES,
   FILTER_SELLERTYPE_VALUES,
-} from '../../constants/filters/Filters';
+} from '../../../constants/filters/Filters';
 
-import { computeActiveFilters } from '../../helpers/filters/Filters';
+import { computeActiveFilters } from '../../../helpers/filters/Filters';
 
-import Select from '../common/select/Select';
-import Checkbox from '../common/checkbox/Checkbox';
+import Select from '../select/Select';
+import Checkbox from '../checkbox/Checkbox';
 
 import './Filters.css';
 

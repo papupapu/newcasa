@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import './style/casa.css';
 import './style/srp.css';
 
-import { testOverlayer } from './helpers/DOMHelpers';
+import { userDevice } from './helpers/DOMHelpers';
 import { computeSearchUrl } from './helpers/search/Search';
 import { computeActiveFilters } from './helpers/filters/Filters';
 
@@ -16,9 +16,9 @@ import {
   FOOTER_COMPANY_INFOS,
 } from './constants/footer/Footer';
 
-import Header from './components/header/Header';
+import Header from './components/common/header/Header';
 import ListingPage from './ListingPage';
-import Footer from './components/footer/Footer';
+import Footer from './components/common/footer/Footer';
 import Modal from './components/common/modal/Modal';
 import Overlayer from './components/common/overlayer/Overlayer';
 
@@ -28,6 +28,9 @@ class Test extends React.Component {
     super(props);
 
     this.state = {
+      device: '',
+      viewport: { width: '', height: '' },
+      touchscreen: false,
       modal: false,
     };
 
@@ -43,15 +46,21 @@ class Test extends React.Component {
   }
 
   componentDidMount() {
-    /*
     const ui = userDevice();
     this.setUiInfos(ui);
     window.addEventListener('resize', () => {
       const updatedUi = userDevice();
       this.setUiInfos(updatedUi);
     });
-    */
     this.doc = document.body;
+  }
+
+  setUiInfos(ui) {
+    this.setState({
+      device: ui.device,
+      viewport: ui.viewport,
+      touchscreen: ui.touchscreen,
+    });
   }
 
   toggleSiteHiddenComponents(evt, obj) {
@@ -140,6 +149,8 @@ class Test extends React.Component {
         }
         <ListingPage
           ref={(listingPageComponent) => { this.listingPageComponent = listingPageComponent; }}
+          device={this.state.device}
+          viewport={this.state.viewport}
           channel={this.channel}
           openModal={this.toggleSiteHiddenComponents}
           updateSearchUrl={this.updateSearchUrl}

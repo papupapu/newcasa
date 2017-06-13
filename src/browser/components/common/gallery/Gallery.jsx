@@ -15,6 +15,7 @@ class Gallery extends React.Component {
       iGotSizes: false,
     };
     this.sliderObj = null;
+    this.floorplanIndex = null;
   }
 
   componentDidMount() {
@@ -37,6 +38,7 @@ class Gallery extends React.Component {
       ];
       this.sliderObj = {
         media: this.photoArray,
+        floorplanIndex: this.floorplanIndex,
         // slidesLinkTo: this.props.slidesLinkTo,
         sizes: this.sliderSizes,
         device: nextProps.device,
@@ -49,7 +51,19 @@ class Gallery extends React.Component {
 
   setSliderMediaUp() {
     const { media } = this.props;
-    this.photoArray = media.filter((el) => { if (el.type === 'photo') { return el; } return false; });
+    this.photoArray = media.filter(
+      (el, index) => {
+        if (el.type === 'photo') {
+          return el;
+        } else if (el.type === 'floorplan') {
+          if (this.floorplanIndex === null) {
+            this.floorplanIndex = index;
+          }
+          return el;
+        }
+        return false;
+      },
+    );
     this.setState({ iGotSizes: true });
   }
 

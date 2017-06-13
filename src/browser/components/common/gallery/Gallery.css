@@ -76,6 +76,14 @@
   background:rgba(0,0,0,.4);
 }
 
+.gallery a.floorplanIco{
+  position:absolute; z-index:10;
+  bottom:.5rem; left:.5rem;
+  width:3rem; height:2.4rem;
+  text-indent:-9999em;
+  background:#FFF url(/images/floorplanIco.svg) center center no-repeat; background-size:2.4rem auto; border-radius:3px;
+}
+
 /* fullPage */
 
 .fullPage{

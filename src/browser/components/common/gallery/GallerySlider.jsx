@@ -32,6 +32,7 @@ class GallerySlider extends React.Component {
     this.touchStart = this.touchStart.bind(this);
     this.touchMove = this.touchMove.bind(this);
     this.touchEnd = this.touchEnd.bind(this);
+    this.createFloorplanIco = this.createFloorplanIco.bind(this);
   }
 
   componentWillMount() {
@@ -105,12 +106,17 @@ class GallerySlider extends React.Component {
     const coords = this.state.sizes[0] * this.cur;
     this.sliderTransition();
     this.slider.style.transform = `translate(-${coords}px,0)`;
-    if (this.cur === this.slidesCreated - 1 && this.slidesCreated < this.tot) {
+    if (this.cur > this.slidesCreated - 1) {
+      this.slidesCreated = this.cur === this.tot - 1 ? this.tot : this.cur + 1;
+      this.slides = this.createSlides(this.state.sizes[0], this.state.sizes[1]);
+      this.setState({ rerender: !this.state.rerender });
+    } else if (this.cur === this.slidesCreated - 1 && this.slidesCreated < this.tot) {
       const howmany = this.slidesCreated + this.slidesToAdd > this.tot;
       this.slidesCreated = howmany ? this.tot : this.slidesCreated + this.slidesToAdd;
       this.slides = this.createSlides(this.state.sizes[0], this.state.sizes[1]);
       this.setState({ rerender: !this.state.rerender });
-    } else if (this.counter) {
+    }
+    if (this.counter) {
       this.counter.innerHTML = `${this.cur + 1} / ${this.tot}`;
       if (this.cur === 0) {
         this.prev.className = 'prev';
@@ -171,10 +177,29 @@ class GallerySlider extends React.Component {
     this.deltaX = 0;
   }
 
+  createFloorplanIco() {
+    return (
+      <a
+        ref={(floorplanIco) => { this.floorplanIco = floorplanIco; }}
+        href=""
+        title="Vai alla planimetria"
+        className="floorplanIco"
+        onClick={(e) => {
+          e.preventDefault();
+          this.cur = this.props.floorplanIndex;
+          this.sliderGoToCoords();
+        }}
+      >
+        Vai alla planimetria
+      </a>
+    );
+  }
+
   render() {
     const countervalue = `${this.cur + 1} / ${this.tot}`;
     const prevStyle = this.cur > 0 ? 'prev active' : 'prev';
     const nextStyle = this.cur < this.tot - 1 ? 'next active' : 'next';
+    const floorplanIco = this.props.floorplanIndex !== null ? this.createFloorplanIco() : null;
     return (
       <div
         ref={(sliderContainer) => { this.sliderContainer = sliderContainer; }}
@@ -190,6 +215,7 @@ class GallerySlider extends React.Component {
         <p ref={(counter) => { this.counter = counter; }} className="textCounter">
           { countervalue }
         </p>
+        {floorplanIco}
       </div>
     );
   }
@@ -199,6 +225,7 @@ class GallerySlider extends React.Component {
 GallerySlider.propTypes = {
   device: PropTypes.string,
   media: PropTypes.instanceOf(Array),
+  floorplanIndex: PropTypes.number,
   slidesLinkTo: PropTypes.string,
   sizes: PropTypes.instanceOf(Array),
   type: PropTypes.string,
@@ -207,6 +234,7 @@ GallerySlider.propTypes = {
 GallerySlider.defaultProps = {
   device: '',
   media: [],
+  floorplanIndex: 0,
   slidesLinkTo: '',
   sizes: [],
   type: '',
